@@ -1,0 +1,1210 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Design Tokens */
+    --sand-canvas: #F7F5F0;
+    --alabaster-warm: #FAF9F6;
+    --pure-white: #FFFFFF;
+    --terracotta: #C86D44;
+    --terracotta-dark: #B85D3B;
+    --terracotta-soft: #EBDDD8;
+    --terracotta-tint: #FFDBCF;
+    --forest-green: #2A4B3C;
+    --forest-dark: #1E372C;
+    --forest-light: #3D6150;
+    --charcoal-deep: #22201E;
+    --charcoal-soft: #444748;
+    --sage-muted: #7B8B76;
+    --stone-hairline: #E5E0D8;
+    --stone-dim: #D1C4BF;
+
+    --background: var(--sand-canvas);
+    --foreground: var(--charcoal-deep);
+  }
+}
+
+/* Custom Utilities for Editorial Typography and Layouts */
+@utility bg-sand-canvas {
+  background-color: var(--sand-canvas);
+}
+
+@utility bg-alabaster {
+  background-color: var(--alabaster-warm);
+}
+
+@utility bg-terracotta {
+  background-color: var(--terracotta);
+}
+
+@utility bg-terracotta-dark {
+  background-color: var(--terracotta-dark);
+}
+
+@utility bg-forest {
+  background-color: var(--forest-green);
+}
+
+@utility bg-forest-dark {
+  background-color: var(--forest-dark);
+}
+
+@utility text-terracotta {
+  color: var(--terracotta);
+}
+
+@utility text-terracotta-dark {
+  color: var(--terracotta-dark);
+}
+
+@utility text-forest {
+  color: var(--forest-green);
+}
+
+@utility text-charcoal {
+  color: var(--charcoal-deep);
+}
+
+@utility text-charcoal-soft {
+  color: var(--charcoal-soft);
+}
+
+@utility text-sage {
+  color: var(--sage-muted);
+}
+
+@utility border-stone-hairline {
+  border-color: var(--stone-hairline);
+}
+
+@utility border-terracotta {
+  border-color: var(--terracotta);
+}
+
+/* Typography styles */
+.font-serif-editorial {
+  font-family: var(--font-cormorant), "EB Garamond", "Playfair Display", "Times New Roman", serif;
+}
+
+.font-sans-clean {
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+.font-script-accent {
+  font-family: var(--font-alex), "Brush Script MT", cursive;
+}
+
+/* Smooth Scrolling Support */
+html {
+  scroll-behavior: smooth;
+  background-color: #F7F5F0;
+  color: #22201E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #F7F5F0;
+  color: #22201E;
+  overflow-x: hidden;
+}
+
+/* Lenis Smooth Scroll Configuration */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Subtle image zoom transition */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Fine hairline borders */
+.hairline-b {
+  border-bottom: 1px solid var(--stone-hairline);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hairline-t {
+  border-top: 1px solid var(--stone-hairline);
+}
+
+.hairline-all {
+  border: 1px solid var(--stone-hairline);
+}
+
+/* ==========================================================================
+   ELITE HIGH-END MICRO-INTERACTIONS & MOTION DESIGN
+   Hardware accelerated (transform, opacity, backdrop-filter)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-tactile: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  /* 1. BUTTONS & CTAs: Tactile scale, squash click, & subtle light shimmer */
+  button:not(.modal-close-btn),
+  .btn,
+  a[class*="bg-[#C86D44]"],
+  a[class*="bg-black"],
+  a[class*="bg-white"],
+  a[href*="wa.me"],
+  a[class*="BOOK NOW"] {
+    position: relative;
+    overflow: hidden;
+    transition: transform 320ms var(--ease-editorial),
+      box-shadow 320ms var(--ease-editorial),
+      background-color 300ms ease,
+      border-color 300ms ease,
+      color 300ms ease !important;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  button:not(.modal-close-btn):hover,
+  .btn:hover,
+  a[class*="bg-[#C86D44]"]:hover,
+  a[class*="bg-black"]:hover,
+  a[class*="bg-white"]:hover,
+  a[href*="wa.me"]:hover {
+    transform: scale(1.02) translateZ(0);
+  }
+
+  button:not(.modal-close-btn):active,
+  .btn:active,
+  a[class*="bg-[#C86D44]"]:active,
+  a[class*="bg-black"]:active,
+  a[class*="bg-white"]:active,
+  a[href*="wa.me"]:active {
+    transform: scale(0.98) translateZ(0) !important;
+    transition-duration: 100ms !important;
+  }
+
+  /* Shimmer reflection highlight on button hover */
+  button:not(.modal-close-btn)::after,
+  .btn::after,
+  a[class*="bg-[#C86D44]"]::after,
+  a[class*="bg-black"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.12) 50%,
+        transparent 100%);
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 600ms var(--ease-editorial), opacity 300ms ease;
+    pointer-events: none;
+  }
+
+  button:hover::after,
+  .btn:hover::after,
+  a[class*="bg-[#C86D44]"]:hover::after,
+  a[class*="bg-black"]:hover::after {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+
+  /* 2. CARDS & CONTAINERS: Soft elevation lift & mouse-tracking radial spotlight */
+  .interactive-card,
+  [class*="border border-[#E5E0D8]"],
+  [class*="border border-white/10"] {
+    position: relative;
+    transition: transform 380ms var(--ease-editorial),
+      box-shadow 380ms var(--ease-editorial),
+      border-color 300ms ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+
+  .interactive-card:hover,
+  div[class*="border border-[#E5E0D8]"]:hover {
+    transform: translateY(-4px) translateZ(0);
+    box-shadow: 0 16px 36px -12px rgba(34, 32, 30, 0.08),
+      0 4px 12px -4px rgba(34, 32, 30, 0.04);
+  }
+
+  /* Mouse-tracking radial spotlight */
+  .interactive-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(200, 109, 68, 0.08),
+        transparent 60%);
+    opacity: 0;
+    transition: opacity 350ms ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .interactive-card:hover::before {
+    opacity: 1;
+  }
+
+  /* 3. VIEWPORT ENTRANCE: Staggered slide-up & fade-in */
+  .reveal-element {
+    opacity: 0;
+    transform: translateY(22px) translateZ(0);
+    transition: opacity 650ms var(--ease-editorial),
+      transform 650ms var(--ease-editorial);
+    will-change: opacity, transform;
+  }
+
+  .reveal-element.is-revealed {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+
+  /* 4. LINKS & TEXT TRIGGERS: Sleek expanding magnetic underline */
+  .editorial-link,
+  nav a,
+  a[href^="/"]:not([class*="bg-"]):not([class*="px-"]):not([class*="py-"]),
+  a[class*="underline-trigger"] {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: color 250ms ease;
+  }
+
+  .editorial-link::after,
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 380ms var(--ease-editorial);
+    will-change: transform;
+  }
+
+  .editorial-link:hover::after,
+  nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Active nav link underlines stay pinned */
+  nav a[class*="border-b"]::after {
+    transform: scaleX(1);
+  }
+
+  /* 5. IMAGE HOVERS: Editorial smooth scale */
+  .image-zoom-container img {
+    transition: transform 900ms var(--ease-editorial) !important;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .image-zoom-container:hover img {
+    transform: scale(1.04) translateZ(0) !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT OPTIMIZATIONS (@media (max-width: 768px))
+   Guarantees zero desktop disruption, zero horizontal overflow, fluid scaling
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* 1. Global Viewport & Overflow Safeguards */
+  html,
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Universal Media Fluidity */
+  img,
+  video,
+  svg {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  iframe {
+    max-width: 100% !important;
+  }
+
+  /* 2. Fluid Typography Scaling (clamp safeguards against line clipping) */
+  h1,
+  [class*="text-4xl"],
+  [class*="text-5xl"],
+  [class*="text-6xl"],
+  [class*="lg:text-[68px]"],
+  [class*="lg:text-[62px]"] {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  h2,
+  [class*="text-3xl"],
+  [class*="lg:text-[46px]"],
+  [class*="lg:text-[44px]"] {
+    font-size: clamp(1.5rem, 6vw, 1.95rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  h3,
+  [class*="text-2xl"] {
+    font-size: clamp(1.25rem, 5vw, 1.45rem) !important;
+    line-height: 1.28 !important;
+  }
+
+  /* Legible, comfortable mobile body copy */
+  p,
+  li {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* 3. Spacing & Padding Compression for Mobile Scannability */
+  section {
+    padding-top: clamp(2.5rem, 8vw, 3.75rem) !important;
+    padding-bottom: clamp(2.5rem, 8vw, 3.75rem) !important;
+  }
+
+  .max-w-7xl,
+  .max-w-5xl,
+  .max-w-4xl,
+  .max-w-3xl {
+    padding-left: 1.25rem !important;
+    /* 20px gutters */
+    padding-right: 1.25rem !important;
+  }
+
+  /* 4. Touch Target Safeguards (Minimum 44x44px for accessibility) */
+  button:not(.counter-btn):not(.modal-close-btn),
+  a,
+  input,
+  select {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .modal-close-btn {
+    touch-action: manipulation;
+  }
+
+  button:not(.counter-btn),
+  .btn,
+  a[class*="px-"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Disable hover-dependent cues that misbehave on touch screens */
+  .interactive-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .interactive-card::before {
+    display: none !important;
+  }
+
+  /* 5. Horizontal Data / Table Scroll Containers without breaking bounds */
+  .mobile-scroll-container,
+  [class*="overflow-x-auto"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* ==========================================================================
+     MOBILE HERO SECTION REFINEMENTS (Scoped strictly to @media (max-width: 768px))
+     ========================================================================== */
+
+  /* 1. Header & Logo Cleanup */
+  header {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Hide the top mobile "BOOK" button exclusively to remove clutter */
+  header .flex.md\:hidden button.bg-white {
+    display: none !important;
+  }
+
+  /* Vertically center logo and hamburger */
+  header>div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  /* 2. Readability Scrim (Gradient Overlay) on Hero Image Container */
+  section.relative.h-screen>.absolute.inset-0.z-0::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.1) 40%,
+        rgba(0, 0, 0, 0.65) 75%,
+        rgba(0, 0, 0, 0.88) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* 3. Typography & Hierarchy */
+  /* Subtitle eyebrow ("A PROMISE OF WELL-BEING...") */
+  section.relative.h-screen .font-sans-clean.tracking-\[0\.25em\] {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.15em !important;
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Main serif title ("The quiet sanctuary in Canggu") */
+  section.relative.h-screen h1.font-serif-editorial {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    margin-top: 0.75rem !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+  }
+
+  /* Push text block down so it sits just above bottom CTA, clearing image center */
+  section.relative.h-screen>.relative.z-10.w-full.max-w-5xl {
+    padding-bottom: 6.5rem !important;
+    margin-top: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* 4. Floating Bottom CTA Card */
+  section.relative.h-screen>.relative.z-10.w-full.px-6.sm\:px-12 {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    margin: 0 16px 16px 16px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    z-index: 20 !important;
+  }
+
+  section.relative.h-screen>.relative.z-10.w-full.px-6.sm\:px-12 a,
+  section.relative.h-screen>.relative.z-10.w-full.px-6.sm\:px-12 button {
+    width: 100% !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+    padding-top: 0.95rem !important;
+    padding-bottom: 0.95rem !important;
+    justify-content: center !important;
+  }
+
+  /* ==========================================================================
+     MOBILE SMOOTH SCROLL, ANIMATIONS & INTERACTIVE ENVIRONMENT
+     ========================================================================== */
+
+  /* Native inertial smooth scrolling & momentum bounce */
+  html {
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fluid mobile viewport scroll reveals */
+  .reveal-element {
+    opacity: 0;
+    transform: translateY(16px) translateZ(0);
+    transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: opacity, transform;
+  }
+
+  .reveal-element.is-revealed {
+    opacity: 1;
+    transform: translateY(0) translateZ(0) !important;
+  }
+
+  /* Micro-interactions & Tactile Tap Feedback on Mobile (Spring feel) */
+  button:not(.modal-close-btn):active,
+  a.inline-flex:active,
+  a[class*="bg-"]:active,
+  .btn:active {
+    transform: scale(0.97) translateZ(0) !important;
+    transition: transform 120ms cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+  }
+
+  /* Card and tile touch interactions */
+  .interactive-card:active,
+  div[class*="border border-[#E5E0D8]"]:active {
+    transform: scale(0.985) translateZ(0) !important;
+    transition: transform 150ms cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+  }
+
+  /* Mobile horizontal scroll carousels with smooth snap physics */
+  .overflow-x-auto,
+  [class*="overflow-x-auto"],
+  .mobile-scroll-container {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar,
+  [class*="overflow-x-auto"]::-webkit-scrollbar,
+  .mobile-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overflow-x-auto>*,
+  [class*="overflow-x-auto"]>*,
+  .mobile-scroll-container>* {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  /* Mobile floating CTA entrance animation */
+  section.relative.h-screen>.relative.z-10.w-full.px-6.sm\:px-12 {
+    animation: mobileCtaEntrance 800ms cubic-bezier(0.16, 1, 0.3, 1) 200ms backwards;
+  }
+
+  @keyframes mobileCtaEntrance {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ==========================================================================
+     MOBILE ACCOMMODATION SECTION REFINEMENTS (@media (max-width: 768px))
+     Visual Reordering, Premium Amenities Styling & Polished CTA Button
+     ========================================================================== */
+
+  /* 1. Visual Reordering (Subgrid / Flex Display) */
+  section.bg-\[\#FFFFFF\]:has(a[href="/accommodation"]) .grid.grid-cols-1.lg\:grid-cols-12,
+  section:has(a[href="/accommodation"]) .grid.grid-cols-1.lg\:grid-cols-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Set the left text column to display contents so its immediate children become flex items */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5 {
+    display: contents !important;
+  }
+
+  /* Order 1: Section Headings (Subtitle & Title) */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>div:first-child {
+    order: 1 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Order 2: Intro Paragraph */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>p {
+    order: 2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Order 3: Room Image pulled up directly under headings/intro */
+  section:has(a[href="/accommodation"]) .lg\:col-span-7 {
+    order: 3 !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  section:has(a[href="/accommodation"]) .lg\:col-span-7 .aspect-\[16\/11\] {
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  /* Order 4: Premium Amenities List */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>ul {
+    order: 4 !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Replace generic bullets with minimalist dash and soft gray typography */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>ul li {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 0.625rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #4a4a4a !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hide raw bullet span inside existing DOM */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>ul li>span:first-child {
+    display: none !important;
+  }
+
+  /* Minimalist thin dash pseudo-element */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>ul li::before {
+    content: "—" !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    color: #C86D44 !important;
+    /* Subtle warm terracotta accent */
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Order 5: Polished Mobile CTA */
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>div:last-child {
+    order: 5 !important;
+    width: 100% !important;
+    padding-top: 0.5rem !important;
+  }
+
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>div:last-child a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 13px 20px !important;
+    border: 1px solid #22201E !important;
+    border-radius: 4px !important;
+    background-color: transparent !important;
+    color: #22201E !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.18em !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    transition: all 200ms ease !important;
+  }
+
+  section:has(a[href="/accommodation"]) .lg\:col-span-5>div:last-child a:active {
+    background-color: #22201E !important;
+    color: #FFFFFF !important;
+  }
+
+  /* ==========================================================================
+     MOBILE ARCHITECTURE & HERITAGE SECTION REFINEMENTS (@media (max-width: 768px))
+     Visual Reordering, Refined Padding, Centered Stat Cards & Interactive Links
+     ========================================================================== */
+
+  /* 1. Parent Grid Container to Flex Column */
+  section.bg-\[\#4E4542\] .grid.grid-cols-1.lg\:grid-cols-12,
+  section:has(img[src*="temple-offering"]) .grid.grid-cols-1.lg\:grid-cols-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  /* Set the dark content container to display contents so children participate in parent flex */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col {
+    display: contents !important;
+  }
+
+  /* Order 1: Heading Block (Subtitle & Title) at top, above the image */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div:first-child,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div:first-child {
+    order: 1 !important;
+    padding: 2.25rem 1.5rem 1.25rem 1.5rem !important;
+    background-color: #4E4542 !important;
+  }
+
+  /* Order 2: Image Container */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.relative,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.relative {
+    order: 2 !important;
+    min-height: 340px !important;
+    height: 340px !important;
+    width: 100% !important;
+  }
+
+  /* Order 3: Main Paragraph */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>p,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>p {
+    order: 3 !important;
+    padding: 1.75rem 1.5rem 0.5rem 1.5rem !important;
+    background-color: #4E4542 !important;
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+    color: rgba(247, 245, 240, 0.9) !important;
+  }
+
+  /* Order 4: Stat / Metric Cards */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.grid.grid-cols-2,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.grid.grid-cols-2 {
+    order: 4 !important;
+    padding: 1rem 1.5rem 1.25rem 1.5rem !important;
+    background-color: #4E4542 !important;
+    gap: 0.875rem !important;
+  }
+
+  /* Stat card refinement: Centered layout with subtle border */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.grid.grid-cols-2>div,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.grid.grid-cols-2>div {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.15rem 0.75rem !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background-color: rgba(67, 59, 57, 0.6) !important;
+  }
+
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.grid.grid-cols-2>div>div {
+    justify-content: center !important;
+  }
+
+  /* Order 5: Bottom Feature Anchors / Interactive Links */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.pt-6.border-t,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.pt-6.border-t {
+    order: 5 !important;
+    padding: 0.5rem 1.5rem 2.5rem 1.5rem !important;
+    background-color: #4E4542 !important;
+    border-top: none !important;
+  }
+
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 16px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.2em !important;
+    color: #D1C4BF !important;
+    transition: color 200ms ease !important;
+  }
+
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a:last-child,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Right-aligned interactive indicator arrow */
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a::after,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a::after {
+    content: "→" !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    transform: translateX(0);
+    transition: transform 200ms ease, color 200ms ease;
+  }
+
+  section.bg-\[\#4E4542\] .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a:active::after,
+  section:has(img[src*="temple-offering"]) .lg\:col-span-6.flex.flex-col>div.pt-6.border-t a:active::after {
+    transform: translateX(3px);
+    color: #FFFFFF;
+  }
+
+  /* ==========================================================================
+     MOBILE EXPERIENCES & NEIGHBOURHOOD SECTION REFINEMENTS (@media (max-width: 768px))
+     Labels, Card Spacing, Distance Metadata Contrast & Polished Full-Width CTA
+     ========================================================================== */
+
+  /* 1. Hide glitchy redundant top white banner label over neighborhood images */
+  section:has(a[href="/experiences"]) .image-zoom-container .absolute.top-0.inset-x-0 {
+    display: none !important;
+  }
+
+  /* 2. Card Separation & Spacing between neighborhood cards */
+  section:has(a[href="/experiences"]) .lg\:col-span-8>div.space-y-4 {
+    margin-bottom: 48px !important;
+  }
+
+  section:has(a[href="/experiences"]) .lg\:col-span-8>div.space-y-4:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* 3. Distance Metadata Contrast & Margin */
+  section:has(a[href="/experiences"]) .lg\:col-span-8 span.tracking-\[0\.2em\] {
+    color: #555555 !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+  }
+
+  /* 4. Fix Directory CTA Link Underline */
+  section:has(a[href="/experiences"]) a[href="/experiences"].inline-flex {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    border-bottom: 1.5px solid #22201E !important;
+    padding-bottom: 4px !important;
+    text-decoration: none !important;
+    width: fit-content !important;
+    transition: color 200ms ease, border-color 200ms ease !important;
+  }
+
+  /* ==========================================================================
+     MOBILE ACCOMMODATION PAGE HERO REFINEMENTS (@media (max-width: 768px))
+     Balanced Headline, Refined Notes Caption & Sunset Gradient Image Overlay
+     ========================================================================== */
+
+  /* 0. Upward Shift & Section Spacing for Accommodation Page */
+  div.bg-\[\#FAF9F6\]:has(h1.font-serif-editorial) {
+    padding-top: 4.75rem !important;
+    /* 76px to cleanly clear fixed navbar with minimal gap */
+  }
+
+  div.bg-\[\#FAF9F6\]:has(h1.font-serif-editorial)>section:first-of-type {
+    padding-top: 0.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* 1. Balanced Headline Typography */
+  h1.font-serif-editorial {
+    text-wrap: balance !important;
+    max-width: 95% !important;
+    font-size: clamp(2rem, 8vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  /* 2. Feature Note List Refinement (Emoji & caption notes) */
+  .grid .space-y-4>div.flex {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .grid .space-y-4>div.flex span.leading-relaxed {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    color: #665C59 !important;
+  }
+
+  /* 3. Sunset Panoramic Image Gradient Overlay & Atmospheric Badge */
+  .aspect-\[16\/9\]::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to bottom,
+        transparent 35%,
+        rgba(0, 0, 0, 0.4) 65%,
+        rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+  }
+
+  /* Remove heavy black box styling on mobile and position cleanly over gradient */
+  .aspect-\[16\/9\]>div.absolute.bottom-6 {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+    padding: 0 !important;
+    max-width: 90% !important;
+    z-index: 2 !important;
+  }
+
+  .aspect-\[16\/9\]>div.absolute.bottom-6 p {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* ==========================================================================
+     MOBILE WALKABILITY DIRECTORY SECTION REFINEMENTS (@media (max-width: 768px))
+     Category Spacing, Title/Distance Flex Alignment & List Item Hierarchy
+     ========================================================================== */
+
+  /* 1. Macro Spacing: Distinct category separation on mobile */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3>div.space-y-8:not(:first-child) {
+    margin-top: 64px !important;
+    padding-top: 16px !important;
+  }
+
+  /* 2. Delicate Category Header Divider */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3>div.space-y-8>div.border-b {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* 3. Title & Distance Flex Alignment */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 .flex.items-baseline.justify-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    gap: 16px !important;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 .flex.items-baseline.justify-between h4 {
+    font-size: 19px !important;
+    line-height: 1.25 !important;
+    color: #22201E !important;
+    flex-grow: 1 !important;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 .flex.items-baseline.justify-between span {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    color: #747878 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.16em !important;
+    text-align: right !important;
+  }
+
+  /* 4. Micro Spacing & Hierarchy for Descriptions */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 div.space-y-7>div.group {
+    margin-bottom: 32px !important;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 div.space-y-7>div.group:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 div.space-y-7>div.group p {
+    color: #555555 !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-top: 6px !important;
+  }
+
+  /* ==========================================================================
+     MOBILE PHILOSOPHICAL GROUNDING (TRI HITA KARANA) SECTION (@media (max-width: 768px))
+     Editorial Hierarchy, Cohesive Spacing, Premium Typography & Flow
+     ========================================================================== */
+
+  .philosophical-grounding-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* 1. Flex Column Reordering: Title -> Image -> Story & Features -> Links */
+  .philosophical-grounding-section .grid.grid-cols-1.lg\:grid-cols-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  /* Flatten column children so they can be re-ordered naturally */
+  .philosophical-grounding-section .lg\:col-span-6.px-8 {
+    display: contents !important;
+  }
+
+  /* Order 1: Eyebrow & Headline Block */
+  .philosophical-grounding-section .lg\:col-span-6.px-8>span.text-\[10px\],
+  .philosophical-grounding-section .lg\:col-span-6.px-8>h2 {
+    order: 1 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .philosophical-grounding-section .lg\:col-span-6.px-8>span.text-\[10px\] {
+    padding-top: 36px !important;
+    letter-spacing: 0.24em !important;
+    font-size: 11px !important;
+    color: #EBDDD8 !important;
+    opacity: 0.85 !important;
+  }
+
+  .philosophical-grounding-section .lg\:col-span-6.px-8>h2 {
+    font-size: clamp(2rem, 7.5vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+    margin-top: 10px !important;
+    margin-bottom: 24px !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  /* Order 2: The Temple Brick Shrine Image */
+  .philosophical-grounding-section .lg\:col-span-6.relative {
+    order: 2 !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 360px !important;
+    height: 360px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Order 3: Narrative Paragraph */
+  .philosophical-grounding-section .lg\:col-span-6.px-8>p.max-w-xl {
+    order: 3 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    font-size: 14.5px !important;
+    line-height: 1.7 !important;
+    color: rgba(235, 221, 216, 0.9) !important;
+  }
+
+  /* Order 4: Feature Blocks */
+  .philosophical-grounding-section .grid.grid-cols-1.sm\:grid-cols-2 {
+    order: 4 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .philosophical-grounding-section .grid.grid-cols-1.sm\:grid-cols-2>div {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: none !important;
+    border-left: 2px solid rgba(200, 109, 68, 0.8) !important;
+    /* warm terracotta signature line */
+    border-radius: 0 4px 4px 0 !important;
+    padding: 14px 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .philosophical-grounding-section .grid.grid-cols-1.sm\:grid-cols-2>div span {
+    font-size: 11px !important;
+    letter-spacing: 0.2em !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+  }
+
+  .philosophical-grounding-section .grid.grid-cols-1.sm\:grid-cols-2>div p {
+    color: rgba(235, 221, 216, 0.8) !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    margin-top: 6px !important;
+  }
+
+  /* Order 5: Navigational Action Links */
+  .philosophical-grounding-section .pt-3.flex.flex-wrap {
+    order: 5 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    padding: 8px 20px 40px 20px !important;
+  }
+
+  .philosophical-grounding-section .pt-3.flex.flex-wrap a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    background: transparent !important;
+    padding: 18px 0 !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: color 200ms ease, padding-left 200ms ease !important;
+  }
+
+  .philosophical-grounding-section .pt-3.flex.flex-wrap a:active {
+    color: #C86D44 !important;
+    padding-left: 4px !important;
+  }
+
+  /* ==========================================================================
+     MOBILE GOOGLE MAP & CONTACT LOCATION SECTION (@media (max-width: 768px))
+     Full Height Map Viewport & Distance Card Alignment
+     ========================================================================== */
+
+  /* Ensure map wrapper and iframe stretch to comfortable mobile touch proportions */
+  div:has(> iframe[title*="Google Map Pin"]) {
+    height: 380px !important;
+    min-height: 380px !important;
+    position: relative !important;
+    border-radius: 6px !important;
+  }
+
+  div:has(> iframe[title*="Google Map Pin"]) iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    display: block !important;
+    border: 0 !important;
+  }
+
+  /* ==========================================================================
+     MOBILE RHYTHM OF BALI SECTION (@media (max-width: 768px))
+     Single line, tuned font-size & proportional subtitle
+     ========================================================================== */
+
+  section.bg-\[\#EFECE6\] h2 {
+    font-size: clamp(1.4rem, 5.8vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.015em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  section.bg-\[\#EFECE6\] p {
+    font-size: 9.5px !important;
+    letter-spacing: 0.25em !important;
+    color: #8c8f8f !important;
+    margin-top: 6px !important;
+    white-space: nowrap !important;
+  }
+}
