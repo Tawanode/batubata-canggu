@@ -6,6 +6,7 @@ const repoName = process.env.REPO_NAME || "lavra-luxury-camp";
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true,
   basePath: isGithubPages ? `/${repoName}` : undefined,
   images: {
     unoptimized: true,
