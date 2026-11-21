@@ -33,7 +33,7 @@ jobs:
       - name: Build Next.js Static Export
         env:
           GITHUB_PAGES: "true"
-          REPO_NAME: "lavra-luxury-camp"
+          REPO_NAME: "batubata-canggu"
         run: |
           npm run build
           touch out/.nojekyll

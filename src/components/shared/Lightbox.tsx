@@ -123,11 +123,10 @@ export function Lightbox({ images, initialIndex, isOpen, onClose }: LightboxProp
             </p>
           )}
           <p className="font-sans-clean text-xs text-white/60 tracking-wider uppercase mt-1">
-            Lavra Luxury Camp • Wadi Rum, Jordan
+            Magic Rum Hussain • Wadi Rum, Jordan
           </p>
         </div>
       </motion.div>
     </AnimatePresence>
   );
 }
-

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 interface RoomShowcaseSectionProps {
@@ -18,10 +17,9 @@ interface RoomShowcaseSectionProps {
 }
 
 export function RoomShowcaseSection({
-  eyebrow = "PRIMARY RESIDENCE · UPPER FLOOR",
-  title = "Deluxe King Room with Private Veranda",
-
-  priceText = "₹9,355",
+  eyebrow = "50 M² MARTIAN BUBBLE DOME · PANORAMIC TERRACE",
+  title = "Superior King Room",
+  priceText = "JOD 95",
   priceNote = "/ night net",
   images,
   descriptionParagraphs,
@@ -43,15 +41,19 @@ export function RoomShowcaseSection({
           </div>
 
           <div className="text-left md:text-right space-y-0.5">
-
-
+            <span className="font-serif-editorial text-2xl sm:text-3xl text-[#22201E]">
+              {priceText}
+            </span>
+            <span className="text-xs text-[#747878] font-sans-clean ml-1">
+              {priceNote}
+            </span>
           </div>
         </div>
 
         {/* 3-Photo Editorial Grid Spread */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 items-stretch">
 
-          {/* Main Large Photo: King Bedroom & Workspace (7 cols) */}
+          {/* Main Large Photo (7 cols) */}
           <div className="md:col-span-7 relative min-h-[360px] sm:min-h-[460px] lg:min-h-[500px] shadow-sm image-zoom-container group">
             <Image
               src={images.main.src}
@@ -86,7 +88,7 @@ export function RoomShowcaseSection({
               </div>
             </div>
 
-            {/* Bottom Right: Ensuite Terrazzo / Walk-in Bathroom */}
+            {/* Bottom Right: Ensuite Walk-in Shower */}
             <div className="relative h-[220px] sm:h-[240px] shadow-sm image-zoom-container group">
               <Image
                 src={images.bathroom.src}
@@ -109,7 +111,7 @@ export function RoomShowcaseSection({
         {/* Lower Spread: Two Column Editorial Story + Specifications Table */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pt-4 items-start">
 
-          {/* Left Column: Descriptive Storytelling & Direct Booking Button (5 cols) */}
+          {/* Left Column: Storytelling & Direct Booking (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-4 text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.8] font-normal">
               {descriptionParagraphs.map((para, i) => (
@@ -134,15 +136,15 @@ export function RoomShowcaseSection({
               </a>
 
               <span className="text-[11px] text-[#747878] font-sans-clean">
-                Direct booking includes priority morning housekeeping.
+                Includes complimentary buffet breakfast &amp; Wi-Fi.
               </span>
             </div>
           </div>
 
-          {/* Right Column: Room Specifications & Architectural Amenities Table (7 cols) */}
+          {/* Right Column: Room Specifications & Amenities Table (7 cols) */}
           <div className="lg:col-span-7 bg-[#F7F5F0]/80 p-6 sm:p-8 border border-[#E5E0D8]/60 space-y-5">
             <span className="text-[10px] sm:text-[11px] font-sans-clean font-medium tracking-[0.22em] uppercase text-[#747878] block border-b border-[#E5E0D8] pb-3">
-              ROOM SPECIFICATIONS &amp; ARCHITECTURAL AMENITIES
+              ROOM SPECIFICATIONS &amp; GLAMPING AMENITIES
             </span>
 
             <div className="space-y-4 text-xs sm:text-[13px] font-sans-clean">
@@ -168,4 +170,3 @@ export function RoomShowcaseSection({
     </section>
   );
 }
-

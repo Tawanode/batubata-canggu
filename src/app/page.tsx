@@ -14,25 +14,25 @@ export default function HomePage() {
       {/* 1. Cinematic Hero with Integrated Luxury Bottom Bar */}
       <HeroSection />
 
-      {/* 2. Property Introduction (Welcome to Lavra Luxury Camp) */}
+      {/* 2. Property Introduction (Welcome to Magic Rum Hussain) */}
       <PropertyIntroSection />
 
       {/* 3. Rhythm of Wadi Rum Section */}
       <RhythmOfBaliSection />
 
-      {/* 4. Accommodation (Our rooms) Section */}
+      {/* 4. Accommodation (Our 50 m² Rooms & Martian Bubble Domes) */}
       <AccommodationPreviewSection />
 
-      {/* 5. 5-Star Aparthotel Architecture & Heritage */}
+      {/* 5. 5-Star Bedouin Camp Solitude & Hospitality */}
       <BalineseCraftsmanshipSection />
 
-      {/* 6. Desert Amenities & Outdoor Fireplace */}
+      {/* 6. Desert Amenities, Outdoor Campfire & Zarb Dinners */}
       <CourtyardLivingSection />
 
-      {/* 7. Wadi Rum Protected Area Guide */}
+      {/* 7. Wadi Rum Protected Area & Location Guide */}
       <NeighbourhoodGuideSection />
 
-      {/* 8. Verified Guest Sentiment */}
+      {/* 8. Verified Guest Sentiment (Rated 9.3/10 Superb) */}
       <GuestReviewsSection />
 
       {/* 9. Final Invitation & Pre-Footer Callout */}

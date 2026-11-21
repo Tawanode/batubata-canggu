@@ -4,31 +4,31 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const highlights = [
   {
     icon: BrickWall,
-    title: "Mountain Views",
-    tagline: "5-Star Desert Aparthotel",
+    title: "50 m² Bubble Domes",
+    tagline: "5-Star Desert Glamping",
     description:
-      "All 30 rooms feature climate-controlled air conditioning, sound-insulated walls, premium bedding, nightly turndown service, and private patios or balconies with direct mountain views.",
+      "Spacious 50 m² air-conditioned rooms and panoramic Martian bubble domes featuring cozy fireplaces, reliable winter heating, and private mountain-view terraces.",
   },
   {
     icon: Footprints,
-    title: "Prime Location",
-    tagline: "Steps from Visitor Center",
+    title: "Quiet Desert Pocket",
+    tagline: "Rated 9.4/10 Location (9.9 Couples)",
     description:
-      "Located just a 5-minute walk from the heart of Wadi Rum and steps from the main Visitor Center, offering effortless logistics for desert exploration.",
+      "Tucked a few kilometres into the quiet desert near Ad Disah with punctual 4x4 pickup directly from the Wadi Rum Village parking area.",
   },
   {
     icon: Compass,
-    title: "Desert Safaris",
-    tagline: "Guided Jeep & Camel Treks",
+    title: "Desert Jeep Safaris",
+    tagline: "Guided 4x4 & Camel Treks",
     description:
-      "Our internal tour desk coordinates desert jeep tours, guided hiking excursions, and camel rides. Canyon Kakharas is only 3.2 km away.",
+      "Arranged directly with Hussen and family: half-day, full-day, and sunset safaris exploring sand dunes, canyons, and natural rock bridges.",
   },
   {
     icon: Car,
-    title: "Guest Convenience",
-    tagline: "Free Parking & High-Speed Wi-Fi",
+    title: "Guest Comfort & EV",
+    tagline: "Free Parking, EV Charger & Wi-Fi",
     description:
-      "Free private and valet parking on-site, 24-hour reception desk, and high-speed free Wi-Fi across the entire camp property.",
+      "Free private parking with an electric vehicle (EV) charging station, superb free Wi-Fi (8.8/10), and pet-friendly policies at no extra charge.",
   },
 ];
 
@@ -41,9 +41,9 @@ export function HighlightsGridSection() {
         <SectionHeading
           alignment="center"
           eyebrow="Essential Highlights"
-          scriptAccent="desert luxury"
-          title="5-star comforts at Lavra Luxury Camp"
-          subtitle="Honest, grounded hospitality designed for discerning travelers who appreciate authentic Jordanian desert expeditions."
+          scriptAccent="desert glamping"
+          title="5-Star Comforts at Magic Rum Hussain"
+          subtitle="Genuine Bedouin hospitality and modern comforts designed by Hussen Al-Zawaideh and his family in Wadi Rum."
           className="mb-16"
         />
 
@@ -83,4 +83,3 @@ export function HighlightsGridSection() {
     </section>
   );
 }
-

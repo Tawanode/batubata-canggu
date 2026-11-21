@@ -9,8 +9,8 @@ export function ConsciousLivingSection() {
           <line x1="10" y1="11" x2="14" y2="11" />
         </svg>
       ),
-      title: "Dark Sky & Ecology",
-      description: "Located within the Wadi Rum Protected Area with dark-sky preservation, sustainable energy practices, and desert conservation.",
+      title: "Quiet Desert Solitude",
+      description: "Nestled a few kilometres inside the desert near Ad Disah, enjoying peaceful dark-sky stargazing and mountain tranquility.",
     },
     {
       icon: (
@@ -20,8 +20,8 @@ export function ConsciousLivingSection() {
           <path d="m6 10 3 3 3-2 3 2" />
         </svg>
       ),
-      title: "Visitor Center Proximity",
-      description: "Situated steps from the Visitor Center and a 5-minute walk to Wadi Rum village, offering easy logistics and exploration.",
+      title: "Family Care & Pickups",
+      description: "Managed by local host Hussen Al-Zawaideh and family, with punctual 4x4 pickups from Wadi Rum Village parking.",
     },
     {
       icon: (
@@ -33,8 +33,8 @@ export function ConsciousLivingSection() {
           <line x1="14" y1="2" x2="14" y2="5" />
         </svg>
       ),
-      title: "Multi-Cuisine Dining",
-      description: "Diverse culinary offerings (African, Catalan, Dutch, Greek, Indian) alongside authentic Jordanian Bedouin specialties.",
+      title: "Zarb Dining & Breakfast",
+      description: "Exceptional buffet breakfasts and traditional underground slow-cooked Zarb dinners with halal Jordanian specialties.",
     },
     {
       icon: (
@@ -45,8 +45,8 @@ export function ConsciousLivingSection() {
           <path d="M9 16c1.5-1 4.5-1 6 0" />
         </svg>
       ),
-      title: "Sun Terrace & Grounds",
-      description: "Manicured pathways, picnic grounds, sun terraces, and a central outdoor fireplace looking onto Martian mountain views.",
+      title: "Free Parking & EV Charging",
+      description: "Free private parking with an electric vehicle (EV) charging station on-site, plus pet-friendly policies at no extra charge.",
     },
   ];
 
@@ -56,12 +56,11 @@ export function ConsciousLivingSection() {
 
         {/* Section Header */}
         <div className="max-w-2xl space-y-3">
-
           <h2 className="font-serif-editorial text-3xl sm:text-4xl lg:text-[44px] text-[#22201E] font-normal leading-tight">
-            Expedition Sanctuary &amp; Comfort
+            Camp Comforts &amp; Authentic Hospitality
           </h2>
           <p className="text-xs sm:text-[13px] text-[#747878] font-sans-clean leading-relaxed font-normal pt-1">
-            We balance rugged desert exploration with thoughtful, upscale hospitality inside Jordan&apos;s UNESCO World Heritage landscape.
+            We balance rugged desert exploration with thoughtful 5-star comforts inside Jordan&apos;s UNESCO World Heritage landscape.
           </p>
         </div>
 
@@ -94,4 +93,3 @@ export function ConsciousLivingSection() {
     </section>
   );
 }
-

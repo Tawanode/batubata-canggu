@@ -1,101 +1,101 @@
 import { Attraction } from "@/types";
 
 export const attractionsData: Attraction[] = [
-  // Immediate Vicinity (Steps Away & Under 5 Minutes)
+  // Immediate Vicinity & Camp Features
   {
-    id: "visitor-center",
-    name: "Wadi Rum Visitor Center",
-    distance: "150 m",
-    walkTime: "Steps away (2-minute stroll)",
+    id: "hashim-cafeteria",
+    name: "Hashim Cafeteria",
+    distance: "600 m",
+    walkTime: "Short stroll / 2-minute drive",
     category: "immediate",
     description:
-      "The official gateway to the Wadi Rum Protected Area. Arrange permits, gather park maps, view historical exhibits, and meet verified local Bedouin desert guides just moments from our camp.",
-    highlight: "Effortless access right at the camp's doorstep",
-    image: "/images/neighbourhood/canggu-street.jpg",
+      "Local nearby cafeteria offering authentic Jordanian refreshments, freshly brewed mint tea, and quick bites along Wadi Rum Road.",
+    highlight: "Convenient local tea, snacks, and authentic village hospitality",
+    image: "/images/neighbourhood/morning-coffee-sourdough.jpg",
   },
   {
-    id: "central-fireplace",
-    name: "Central Outdoor Fireplace & Stargazing Pit",
+    id: "camp-campfire",
+    name: "Central Fireplace & Bedouin Campfire",
     distance: "On-site",
-    walkTime: "Steps away",
+    walkTime: "Steps from your tent",
     category: "immediate",
     description:
-      "Gather around our glowing central fire pit beneath pristine international dark skies. Enjoy nightly traditional Bedouin cultural shows, authentic live lute music, and astronomical stargazing.",
-    highlight: "Nightly Bedouin music, warm tea, and celestial stargazing",
+      "Gather nightly around our outdoor fireplace beneath world-famous dark skies. Savor traditional Bedouin tea, listen to local desert melodies, and gaze at millions of stars.",
+    highlight: "Nightly campfire gathering, herbal Bedouin tea & stargazing",
     image: "/images/architecture/temple-offering.jpg",
   },
   {
-    id: "camp-restaurant",
-    name: "Lavra Multi-Cuisine Restaurant & Coffee Shop",
+    id: "camp-dining",
+    name: "Traditional Bedouin Restaurant & Zarb Oven",
     distance: "On-site",
     walkTime: "Within the camp",
     category: "immediate",
     description:
-      "Offering a diverse international culinary spread (African, Catalan, Dutch, Greek, Indian) alongside daily vegan and vegetarian options. Complimentary buffet breakfast served 7:30 AM–8:30 AM with takeaway boxes for dawn expeditions.",
-    highlight: "Diverse international gastronomy with mountain views",
-    image: "/images/neighbourhood/canggu-cafe.jpg",
+      "Family-friendly on-site dining serving exceptional buffet breakfasts and traditional underground-cooked Zarb dinners slow-cooked beneath the sand for hours.",
+    highlight: "Authentic slow-cooked underground Zarb & exceptional breakfast",
+    image: "/images/neighbourhood/camp-dining-coffee.jpg",
   },
   {
-    id: "tour-desk-rentals",
-    name: "Expedition Tour Desk & Bicycle Hires",
+    id: "tour-desk",
+    name: "Excursion Tour Desk & 4x4 Jeep Safaris",
     distance: "On-site",
-    walkTime: "At reception",
+    walkTime: "Coordinated with Hussen",
     category: "immediate",
     description:
-      "Our internal tour assistance desk arranges custom 4x4 desert jeep safaris, guided mountain hikes, camel caravans across red sand dunes, and mountain bicycle hires for independent trail rides.",
-    highlight: "Personalized desert jeep safaris and guided excursions",
+      "Coordinated directly by Hussen and his family: half-day, full-day, and sunset 4x4 safaris across sand dunes, canyons, natural rock arches, sandboarding, and camel treks.",
+    highlight: "Personalized Bedouin-guided 4x4 Jeep tours & camel rides",
   },
 
-  // Short Excursions (5 to 15 Minutes)
+  // Regional Landmarks & Cultural Sites
   {
-    id: "sunset-point",
-    name: "Wadi Rum Sunset Point",
-    distance: "4.5 km",
-    walkTime: "10-minute drive",
+    id: "al-disah-station",
+    name: "Al-Disah Train Station (محطة الديسة)",
+    distance: "4.9 km",
+    walkTime: "6-minute drive",
     category: "walk",
     description:
-      "The iconic viewing vantage where the golden hour transforms the Martian valley into vibrant shades of amber, copper, and violet against soaring sandstone cliffs.",
-    highlight: "World-famous panoramic desert sunsets and photography",
-    image: "/images/neighbourhood/batu-bolong-surf.jpg",
+      "Historic regional landmark in Ad Disah along the legendary Hejaz Railway line, framed by spectacular desert massifs and date palm groves.",
+    highlight: "Historic desert railway heritage and photographic desert backdrop",
+    image: "/images/neighbourhood/canggu-street.jpg",
   },
   {
-    id: "canyon-kakharas",
-    name: "Canyon Kakharas",
-    distance: "3.2 km",
-    walkTime: "8-minute drive / guided trek",
+    id: "seven-mountains",
+    name: "Seven Mountains Restaurant",
+    distance: "11 km",
+    walkTime: "12-minute scenic drive",
     category: "walk",
     description:
-      "A dramatic natural gorge flanked by soaring sheer sandstone walls. Famous for ancient wind-carved rock formations and cool shaded canyon walking paths.",
-    highlight: "Stunning geological gorge with ancient wind-sculpted rock walls",
+      "Popular regional culinary stop offering traditional Jordanian dishes, grilled meats, and panoramic views of the Seven Pillars rock formations.",
+    highlight: "Renowned local dining overlooking dramatic desert peaks",
   },
   {
-    id: "nabataean-temple",
-    name: "Nabataean Temple & Ancient Inscriptions",
-    distance: "8.2 km",
-    walkTime: "15-minute drive / jeep tour",
-    category: "beach", // using existing category key
+    id: "wadi-rum-station",
+    name: "Wadi Rum Station",
+    distance: "13 km",
+    walkTime: "15-minute drive",
+    category: "beach", // using category key
     description:
-      "Ruins of a 1st-century BC temple dedicated to the goddess Allat, constructed by the same ancient civilization that built Petra. Surrounded by Thamudic rock inscriptions.",
-    highlight: "Millennia of historic Nabataean ruins and desert petroglyphs",
-  },
-  {
-    id: "deeseh-station",
-    name: "Deeseh Knowledge Station",
-    distance: "14.7 km",
-    walkTime: "20-minute scenic drive",
-    category: "ride",
-    description:
-      "A prominent regional cultural and educational landmark highlighting local desert conservation, community heritage, and desert agricultural history.",
-    highlight: "Regional cultural center showcasing desert heritage",
+      "Historic Ottoman-era railway stop in the Wadi Rum region, offering travelers an evocative glimpse into early 20th-century desert transit history.",
+    highlight: "Ottoman railway outpost set against towering sandstone mountains",
   },
   {
     id: "king-hussein-airport",
     name: "King Hussein International Airport (AQJ)",
-    distance: "68 km",
-    walkTime: "1-hour & 7-minute drive",
+    distance: "69–70 km",
+    walkTime: "1-hour drive (Airport shuttle available)",
     category: "ride",
     description:
-      "The primary international airport serving Aqaba and the southern Jordanian desert. Lavra Luxury Camp provides seamless private airport shuttles and valet parking.",
-    highlight: "Direct airport shuttles and convenient highway connectivity",
+      "The primary airport serving Aqaba and the southern Jordanian desert. Magic Rum Hussain provides punctual private airport shuttle services upon advance request.",
+    highlight: "Direct airport transfers & seamless highway connectivity",
+  },
+  {
+    id: "eilat-ramon-airport",
+    name: "Eilat-Ramon Airport (ETM)",
+    distance: "92 km",
+    walkTime: "1h 30m drive via border transit",
+    category: "ride",
+    description:
+      "International airport across the southern border, accessible for international travelers visiting Wadi Rum via the Aqaba/Eilat crossing.",
+    highlight: "Regional international gateway with transfer options",
   },
 ];

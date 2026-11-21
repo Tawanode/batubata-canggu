@@ -1,4 +1,4 @@
-import { Star, ShieldCheck, Quote } from "lucide-react";
+import { Star, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { reviewsData } from "@/data/reviews";
 
@@ -10,8 +10,8 @@ export function GuestReviewsSection() {
         {/* Header with Score Badge */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <SectionHeading
-            title="What guests love about Lavra Luxury Camp"
-            subtitle="Real verified reviews from desert explorers, couples, families, and stargazers who made our 5-star aparthotel their sanctuary in Wadi Rum."
+            title="What Our Guests Say"
+            subtitle="Rated 9.3/10 'Superb' across 71 reviews, with a 9.6/10 score for Staff hospitality."
           />
         </div>
 
@@ -65,4 +65,3 @@ export function GuestReviewsSection() {
     </section>
   );
 }
-

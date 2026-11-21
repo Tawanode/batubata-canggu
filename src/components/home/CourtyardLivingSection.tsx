@@ -8,22 +8,22 @@ export function CourtyardLivingSection() {
 
           {/* Left: Dual Stepped Image Composition (6 cols) */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6 items-center">
-            {/* Primary Tall Photo: Desert pathways & sun terrace */}
+            {/* Primary Tall Photo: Desert camp pathways */}
             <div className="relative aspect-[3/4] w-full shadow-md image-zoom-container">
               <Image
                 src="/images/courtyard/garden-pathway.jpg"
-                alt="Manicured pathways, sun terrace, and desert landscaping at Lavra Luxury Camp Wadi Rum"
+                alt="Desert pathways, sun terrace, and scenic surroundings at Magic Rum Hussain Wadi Rum"
                 fill
                 sizes="(max-width: 1024px) 50vw, 30vw"
                 className="object-cover"
               />
             </div>
 
-            {/* Secondary Photo: Private patio opening onto mountain views */}
+            {/* Secondary Photo: Private terrace opening onto mountain views */}
             <div className="relative aspect-[3/4] w-full shadow-md image-zoom-container">
               <Image
                 src="/images/courtyard/sitting-terrace.jpg"
-                alt="Private outdoor terrace overlooking sandstone mountain peaks at Lavra Luxury Camp"
+                alt="Private outdoor terrace overlooking red sandstone mountains at Magic Rum Hussain"
                 fill
                 sizes="(max-width: 1024px) 50vw, 30vw"
                 className="object-cover"
@@ -31,11 +31,11 @@ export function CourtyardLivingSection() {
             </div>
           </div>
 
-          {/* Right: Editorial Content & 5-Star Aparthotel Philosophy (6 cols) */}
+          {/* Right: Facilities & Amenities (6 cols) */}
           <div className="lg:col-span-6 space-y-6 lg:pl-4">
             <div>
               <span className="text-[11px] font-sans-clean font-medium tracking-[0.25em] uppercase text-[#747878] block mb-3">
-                RESORT FACILITIES &amp; AMENITIES
+                CAMP FACILITIES &amp; AMENITIES
               </span>
               <h2 className="font-serif-editorial text-4xl sm:text-5xl lg:text-[52px] font-normal text-[#22201E] tracking-tight leading-[1.12]">
                 Desert Sanctuary
@@ -44,24 +44,29 @@ export function CourtyardLivingSection() {
 
             <div className="space-y-4 text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.8] font-normal max-w-xl">
               <p>
-                Our 5-star aparthotel provides the perfect oasis after exploring the dunes: manicured pathways, an expansive sun terrace with loungers, dedicated picnic areas, and a central outdoor fireplace for nightly fireside gatherings under world-class dark skies.
+                Our 5-star camp provides complete comfort in the heart of Wadi Rum: a sun terrace, outdoor fireplace, picnic area, comfortable outdoor furniture, barbecue facilities, and cozy in-room fireplaces in every unit.
               </p>
               <p>
-                Indulge in our primary camp restaurant featuring a diverse international menu (African, Catalan, Dutch, Greek, Indian) alongside daily vegan and vegetarian options. A complimentary buffet breakfast is served daily (7:30 AM–8:30 AM), with takeaway boxes prepared for early excursions. An on-site coffee shop serves refreshments all day.
+                Dine at our on-site family-friendly restaurant serving local Jordanian and traditional Bedouin cuisine (halal options available) for breakfast, brunch, lunch, dinner, high tea, and cocktails. Enjoy exceptional buffet breakfasts, room service, and traditional underground-cooked Zarb dinners slow-roasted under the sand.
               </p>
-
+              <p>
+                Enjoy superb free Wi-Fi across all areas (rated 8.8/10), free private parking with an electric vehicle (EV) charging station, 24-hour front desk, express check-in/out, daily housekeeping, luggage lockers, and pet-friendly policies at no extra charge.
+              </p>
             </div>
 
             {/* Minimalist Pill Badges */}
             <div className="pt-2 flex flex-wrap gap-2.5">
               <span className="bg-[#F7F5F0] border border-[#E5E0D8]/80 text-[#22201E] px-4 py-2 text-[10px] font-sans-clean font-medium tracking-[0.2em] uppercase">
-                OUTDOOR FIREPLACE
+                OUTDOOR CAMPFIRE &amp; ZARB
               </span>
               <span className="bg-[#F7F5F0] border border-[#E5E0D8]/80 text-[#22201E] px-4 py-2 text-[10px] font-sans-clean font-medium tracking-[0.2em] uppercase">
-                FREE VALET PARKING
+                FREE PARKING &amp; EV CHARGER
               </span>
               <span className="bg-[#F7F5F0] border border-[#E5E0D8]/80 text-[#22201E] px-4 py-2 text-[10px] font-sans-clean font-medium tracking-[0.2em] uppercase">
-                HIGH-SPEED WI-FI
+                FREE WI-FI (RATED 8.8)
+              </span>
+              <span className="bg-[#F7F5F0] border border-[#E5E0D8]/80 text-[#22201E] px-4 py-2 text-[10px] font-sans-clean font-medium tracking-[0.2em] uppercase">
+                PETS WELCOME (FREE)
               </span>
             </div>
 

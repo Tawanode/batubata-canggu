@@ -16,8 +16,8 @@ interface MobileNavProps {
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Accommodation", href: "/accommodation" },
-  { name: "Experiences & Neighbourhood", href: "/experiences" },
-  { name: "About & Heritage", href: "/about" },
+  { name: "Experiences & Desert Tours", href: "/experiences" },
+  { name: "About Our Camp", href: "/about" },
   { name: "Contact & Booking", href: "/contact" },
 ];
 
@@ -38,7 +38,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           <div className="flex items-center justify-between border-b border-[#E5E0D8] pb-6">
             <Link href="/" onClick={onClose} className="flex flex-col">
               <span className="font-serif-editorial text-2xl font-light tracking-[0.24em] text-[#22201E] uppercase">
-                LAVRA LUXURY CAMP
+                MAGIC RUM HUSSAIN
               </span>
               <span className="text-[9px] font-sans-clean tracking-[0.28em] text-[#C86D44] uppercase font-semibold">
                 WADI RUM • JORDAN
@@ -90,7 +90,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 className="flex items-center justify-center gap-2 bg-[#C86D44] text-white py-3.5 px-6 text-xs font-semibold uppercase tracking-[0.2em] shadow-md"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp Concierge (+962 7)</span>
+                <span>WhatsApp Hussen (+962 7)</span>
               </a>
               <Link
                 href="/contact"
@@ -101,7 +101,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
               </Link>
             </div>
 
-            {/* Address, Phone and Social Media (hidden on mobile to keep menu uncluttered) */}
+            {/* Address, Phone and Social Media */}
             <div className="hidden sm:block text-xs text-[#444748] space-y-1 font-sans-clean pt-2">
               <p className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#C86D44] shrink-0" />
@@ -116,13 +116,13 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   <span>{propertyData.contact.whatsappFormatted}</span>
                 </a>
                 <a
-                  href="https://instagram.com/lavraluxurycamp"
+                  href="https://instagram.com/magicrumhussain"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 hover:text-[#22201E]"
                 >
                   <InstagramIcon className="w-3.5 h-3.5" />
-                  <span>@lavraluxurycamp</span>
+                  <span>@magicrumhussain</span>
                 </a>
               </div>
             </div>

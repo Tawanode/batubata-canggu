@@ -12,7 +12,7 @@ export function NeighbourhoodRhythmsSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden shadow-md">
               <Image
                 src="/images/neighbourhood/morning-coffee-sourdough.jpg"
-                alt="Complimentary breakfast buffet with fresh coffee, warm bread, and international spreads at Lavra Luxury Camp"
+                alt="Exceptional buffet breakfast with fresh coffee and traditional Bedouin spreads at Magic Rum Hussain"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -31,22 +31,19 @@ export function NeighbourhoodRhythmsSection() {
             </h3>
 
             <p className="hidden md:block text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.85] font-normal">
-              Greet the early morning desert breeze as golden light washes over the towering
-              red granite peaks. Our complimentary buffet breakfast is served daily
-              (7:30 AM&ndash;8:30 AM) with artisan coffee, warm pastries, fresh fruits, and
-              hot delicacies. Early expedition takeaway boxes are readily prepared for dawn desert hikers.
+              Greet the early morning desert breeze as golden light paints the red sandstone mountains of Wadi Rum. Our exceptional buffet breakfast features freshly brewed coffee, warm bread, cheeses, olives, fruits, and hot local specialties. Sunrise camel treks are also ready for dawn desert explorers.
             </p>
 
             {/* Tags */}
             <div className="pt-2 flex flex-wrap items-center gap-2 text-[10px] sm:text-[11px] font-sans-clean text-[#747878]">
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                Buffet Breakfast (7:30&ndash;8:30 AM)
+                Exceptional Breakfast Buffet
               </span>
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                On-Site Artisan Coffee Shop
+                Sunrise Camel Treks
               </span>
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                Takeaway Excursion Boxes
+                Fresh Bedouin Tea &amp; Coffee
               </span>
             </div>
           </div>
@@ -57,28 +54,26 @@ export function NeighbourhoodRhythmsSection() {
           {/* Narrative (Desktop Left, Mobile Order 2) */}
           <div className="lg:col-span-6 space-y-5 lg:pr-4 order-2 lg:order-1">
             <span className="text-[10px] sm:text-[11px] font-sans-clean font-medium tracking-[0.25em] uppercase text-[#C86D44] block">
-              03:00 PM · RED DUNES &amp; CANYONS
+              02:00 PM · RED DUNES &amp; CANYONS
             </span>
 
             <h3 className="font-serif-editorial text-3xl sm:text-4xl lg:text-[42px] text-[#22201E] font-normal leading-[1.18] tracking-tight">
-              Desert Expedition: 4x4 Jeep Safaris &amp; Canyon Kakharas
+              Desert Safaris: 4x4 Jeep Tours &amp; Rock Bridges
             </h3>
 
             <p className="hidden md:block text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.85] font-normal">
-              Embark with expert Bedouin guides across the Martian wilderness. Traverse
-              towering sandstone arches, discover millennial petroglyphs at ancient Nabataean sites,
-              and explore the sheltered corridors of Canyon Kakharas, just 3.2 km from the camp.
+              Embark with Hussen and expert local Bedouin guides across the Martian wilderness. Traverse soaring sandstone arches, navigate sheltered canyon corridors, glide down deep red sand dunes on sandboards, and stop for hot sweet tea brewed over desert embers.
             </p>
 
             {/* Bullet Points */}
             <ul className="pt-2 space-y-2 text-xs text-[#444748] font-sans-clean">
               <li className="flex items-center gap-2.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#22201E] shrink-0" />
-                <span>On-site tour assistance desk for private 4x4 jeep safaris and guided treks</span>
+                <span>Half-day, full-day, and sunset 4x4 Jeep safaris arranged directly at our tour desk</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#22201E] shrink-0" />
-                <span>Camel rides and complimentary bicycle hires available for trail exploration</span>
+                <span>Sandboarding, guided desert hiking, and camel trekking excursions</span>
               </li>
             </ul>
           </div>
@@ -88,7 +83,7 @@ export function NeighbourhoodRhythmsSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden shadow-md">
               <Image
                 src="/images/neighbourhood/desert-jeep-expedition.jpg"
-                alt="4x4 desert safari jeep driving through red sand dunes and sandstone mountains in Wadi Rum Protected Area, Jordan"
+                alt="4x4 desert safari Jeep driving through red sand dunes and sandstone mountains in Wadi Rum Protected Area with Magic Rum Hussain"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -104,7 +99,7 @@ export function NeighbourhoodRhythmsSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden shadow-md">
               <Image
                 src="/images/neighbourhood/fireside-stargazing-night.jpg"
-                alt="Fireside gathering with guests relaxing around the glowing outdoor fire pit under a clear desert night sky filled with stars"
+                alt="Fireside gathering with guests relaxing around the glowing outdoor fire pit under a clear desert night sky filled with stars at Magic Rum Hussain"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -115,29 +110,27 @@ export function NeighbourhoodRhythmsSection() {
           {/* Narrative */}
           <div className="lg:col-span-6 space-y-5 lg:pl-4">
             <span className="text-[10px] sm:text-[11px] font-sans-clean font-medium tracking-[0.25em] uppercase text-[#C86D44] block">
-              07:30 PM · CELESTIAL NIGHTS
+              07:30 PM · CELESTIAL NIGHTS &amp; ZARB
             </span>
 
             <h3 className="font-serif-editorial text-3xl sm:text-4xl lg:text-[42px] text-[#22201E] font-normal leading-[1.18] tracking-tight">
-              Fireside Nights: Bedouin Music &amp; Celestial Stargazing
+              Campfire Nights: Underground Zarb &amp; Stargazing
             </h3>
 
             <p className="hidden md:block text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.85] font-normal">
-              When darkness drapes the valley, gather around our central outdoor fireplace.
-              Enjoy nightly traditional Bedouin cultural melodies, freshly brewed sage tea,
-              and world-class multi-cuisine dinner before stargazing under one of the clearest dark-sky reserves on Earth.
+              When darkness drapes the valley, watch the unearthing of the traditional Bedouin Zarb—slow-cooked for hours under the sand in an underground oven. Afterwards, gather around the glowing outdoor campfire for sage-infused tea, authentic Bedouin hospitality, and breathtaking stargazing under one of the world&apos;s clearest night skies.
             </p>
 
             {/* Tags */}
             <div className="pt-2 flex flex-wrap items-center gap-2 text-[10px] sm:text-[11px] font-sans-clean text-[#747878]">
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                Central Outdoor Fire Pit
+                Traditional Underground Zarb
               </span>
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                Multi-Cuisine Dining
+                Campfire Bedouin Tea
               </span>
               <span className="px-3 py-1.5 bg-[#EFECE6]/80 border border-[#E5E0D8]/60">
-                Dark Sky Stargazing
+                Dark Sky Celestial Stargazing
               </span>
             </div>
           </div>
@@ -147,4 +140,3 @@ export function NeighbourhoodRhythmsSection() {
     </section>
   );
 }
-

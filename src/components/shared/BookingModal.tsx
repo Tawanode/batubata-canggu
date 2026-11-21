@@ -65,7 +65,7 @@ export function BookingModal() {
         <div className="flex items-start justify-between gap-3 pb-1 border-b border-[#E5E0D8]/50 sm:border-none">
           <div className="space-y-1">
             <span className="text-[10px] sm:text-xs font-sans-clean font-bold tracking-[0.22em] uppercase text-[#2A4B3C] block">
-              LAVRA LUXURY CAMP
+              MAGIC RUM HUSSAIN
             </span>
             <h3 className="font-serif-editorial text-2xl sm:text-4xl lg:text-[38px] font-medium text-[#22201E] leading-[1.12]">
               Check Availability
@@ -118,7 +118,7 @@ export function BookingModal() {
 
             <div className="space-y-1.5 sm:space-y-2">
               <label className="text-xs sm:text-sm font-sans-clean font-semibold text-[#22201E] block">
-                Phone Number
+                Phone / WhatsApp Number
               </label>
               <input
                 type="tel"

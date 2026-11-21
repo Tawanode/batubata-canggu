@@ -8,7 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://lavraluxurycamp.com/sitemap.xml",
+    sitemap: "https://magicrumhussain.com/sitemap.xml",
   };
 }
-

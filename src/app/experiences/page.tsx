@@ -1,39 +1,19 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  MapPin,
-  Waves,
-  Utensils,
-  Footprints,
-  Compass,
-  ArrowRight,
-  Sparkles,
-  Heart,
-  Clock,
-  ShieldCheck,
-} from "lucide-react";
-import { SectionHeading } from "@/components/shared/SectionHeading";
+import { ArrowRight } from "lucide-react";
 import { ExperiencesHeroSection } from "@/components/experiences/ExperiencesHeroSection";
 import { SlowCangguLivingSection } from "@/components/experiences/SlowCangguLivingSection";
 import { WalkabilityDirectorySection } from "@/components/experiences/WalkabilityDirectorySection";
 import { NeighbourhoodRhythmsSection } from "@/components/experiences/NeighbourhoodRhythmsSection";
 import { GuestbookQuoteSection } from "@/components/experiences/GuestbookQuoteSection";
-import { attractionsData } from "@/data/neighbourhood";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Desert Excursions & Protected Area | Lavra Luxury Camp Wadi Rum",
+  title: "Desert Excursions & Jeep Safaris | Magic Rum Hussain Wadi Rum",
   description:
-    "Discover guided 4x4 desert jeep safaris, hiking through Canyon Kakharas, camel treks across red sand dunes, and evening stargazing steps from the Wadi Rum Visitor Center at Lavra Luxury Camp.",
+    "Discover guided 4x4 Jeep safaris, sunrise and sunset camel treks, sandboarding, evening campfire stargazing, and punctual village pickups with Hussen at Magic Rum Hussain Wadi Rum.",
 };
 
 export default function ExperiencesPage() {
-  const immediate = attractionsData.filter((a) => a.category === "immediate");
-  const walking = attractionsData.filter((a) => a.category === "walk");
-  const beaches = attractionsData.filter((a) => a.category === "beach");
-  const rides = attractionsData.filter((a) => a.category === "ride");
-
   return (
     <div className="pb-20 bg-[#F7F5F0]">
       
@@ -43,7 +23,7 @@ export default function ExperiencesPage() {
       {/* 2. The Art of Desert Exploration */}
       <SlowCangguLivingSection />
 
-      {/* 3. The Excursions & Landmarks Directory */}
+      {/* 3. The Excursions & Vicinity Directory */}
       <WalkabilityDirectorySection />
 
       {/* 4. Desert Rhythms & Visual Stories */}
@@ -59,7 +39,7 @@ export default function ExperiencesPage() {
             Stay in the Heart of Wadi Rum
           </h2>
           <p className="text-sm text-[#444748] font-sans-clean max-w-xl mx-auto">
-            Book your suite directly on WhatsApp for verified dates, guided jeep tours, and the guaranteed lowest direct rate.
+            Book your 50 m² room or Martian bubble dome directly on WhatsApp with Hussen for verified dates, 4x4 Jeep tour bundles, and authentic Zarb dinners.
           </p>
           <div className="pt-2">
             <a
@@ -78,4 +58,3 @@ export default function ExperiencesPage() {
     </div>
   );
 }
-

@@ -16,24 +16,24 @@ export function generateWhatsAppUrl(params?: BookingEnquiryParams): string {
 
   if (!params || !params.name) {
     const defaultText =
-      "Hello Lavra Luxury Camp Wadi Rum, I would like to inquire about room availability and desert tours for an upcoming stay in Jordan.";
+      "Hello Hussen! I would like to inquire about staying at Magic Rum Hussain (Magic Rum Luxury Hussen) and booking desert excursions in Wadi Rum.";
     return `https://wa.me/${baseNumber}?text=${encodeURIComponent(defaultText)}`;
   }
 
   const lines = [
-    `*Hello Lavra Luxury Camp Wadi Rum!*`,
+    `*Hello Hussen & Magic Rum Hussain Team!*`,
     ``,
-    `I would like to enquire about a suite reservation with the following details:`,
+    `I would like to enquire about a stay at Magic Rum Hussain with the following details:`,
     `• *Guest Name:* ${params.name}`,
     params.email ? `• *Email:* ${params.email}` : null,
     params.phone ? `• *Phone/WhatsApp:* ${params.phone}` : null,
     params.checkIn ? `• *Check-in Date:* ${params.checkIn}` : null,
     params.checkOut ? `• *Check-out Date:* ${params.checkOut}` : null,
     params.guests ? `• *Guests:* ${params.guests}` : null,
-    params.roomType ? `• *Room Preference:* ${params.roomType}` : null,
-    params.message ? `• *Special Requests:* ${params.message}` : null,
+    params.roomType ? `• *Accommodation Preference:* ${params.roomType}` : null,
+    params.message ? `• *Special Requests / Excursions:* ${params.message}` : null,
     ``,
-    `Could you please let me know current availability, desert excursion options, and direct booking rates? Thank you!`,
+    `Could you please confirm availability, tent/bubble options, village pickup timing, and excursion bundles (4x4 Jeep tour, Zarb dinner)? Thank you!`,
   ]
     .filter(Boolean)
     .join("\n");
@@ -43,19 +43,19 @@ export function generateWhatsAppUrl(params?: BookingEnquiryParams): string {
 
 export function generateMailtoUrl(params: BookingEnquiryParams): string {
   const email = propertyData.contact.email;
-  const subject = `Reservation Enquiry — ${params.name || "Lavra Luxury Camp"}`;
+  const subject = `Reservation Enquiry — ${params.name || "Magic Rum Hussain"}`;
   const body = [
-    `Dear Lavra Luxury Camp Reservations Team,`,
+    `Dear Hussen Al-Zawaideh & Magic Rum Hussain Team,`,
     ``,
-    `I would like to check suite availability with the following details:`,
+    `I would like to check accommodation availability with the following details:`,
     `Guest Name: ${params.name}`,
     `Email: ${params.email || "N/A"}`,
     `Phone: ${params.phone || "N/A"}`,
     `Check-in: ${params.checkIn || "N/A"}`,
     `Check-out: ${params.checkOut || "N/A"}`,
     `Number of Guests: ${params.guests || "2 Guests"}`,
-    `Room Category: ${params.roomType || "Superior Deluxe Double or Twin Room"}`,
-    `Special Requests / Arrival Details: ${params.message || "None"}`,
+    `Room Category: ${params.roomType || "Superior King Room (50 m²)"}`,
+    `Special Requests / Tours / Pickup: ${params.message || "None"}`,
     ``,
     `Looking forward to hearing from you.`,
     `Warm regards,`,

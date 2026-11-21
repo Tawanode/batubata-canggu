@@ -4,21 +4,17 @@ import {
   Phone,
   Mail,
   ArrowUpRight,
-  ShieldCheck,
   Footprints,
-  Clock,
-  Compass,
 } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ContactEnquiryForm } from "@/components/contact/ContactEnquiryForm";
 import { propertyData } from "@/data/property";
-import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Contact & Reservations | Lavra Luxury Camp Wadi Rum",
+  title: "Contact & Reservations | Magic Rum Hussain Wadi Rum",
   description:
-    "Connect directly with Lavra Luxury Camp in Wadi Rum Protected Area, Jordan. Direct WhatsApp reservations, 24-hour reception desk, and desert safari assistance.",
+    "Connect directly with Hussen Al-Zawaideh at Magic Rum Hussain (Magic Rum Luxury Hussen) in Wadi Rum, Jordan. Direct WhatsApp reservations +962 7 7683 8471, village pickup coordination, and 4x4 desert tours.",
 };
 
 export default function ContactPage() {
@@ -30,10 +26,8 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionHeading
             alignment="center"
-
-
-            title="Connect with Lavra Luxury Camp"
-            subtitle="Reach out directly to our 24-hour front desk for real-time room availability, airport transfer coordination, and desert tour reservations."
+            title="Connect with Magic Rum Hussain"
+            subtitle="Reach out directly to local host Hussen Al-Zawaideh and family for real-time room and bubble dome availability, village 4x4 pickup, and desert safari planning."
           />
         </div>
       </section>
@@ -51,8 +45,9 @@ export default function ContactPage() {
                 VERIFIED PROPERTY DETAILS
               </span>
               <h3 className="font-serif-editorial text-2xl sm:text-3xl text-[#22201E] font-light">
-                Lavra Luxury Camp Hotel
+                Magic Rum Hussain
               </h3>
+
 
               <div className="space-y-4 text-xs sm:text-sm text-[#444748] font-sans-clean">
                 <div className="flex items-start gap-3">
@@ -60,7 +55,7 @@ export default function ContactPage() {
                   <div>
                     <strong className="text-[#22201E] block font-semibold">Address &amp; Location</strong>
                     <span>
-                      Ram Street, Wadi Rum Protected Area, Wadi Rum Village, Al &apos;Aqabah, Jordan (Plus Code: HCFC+QC5)
+                      Wadi Rum Road (طريق وادي رم), Ad Disah, Wadi Rum Protected Area, Aqaba Governorate, Jordan
                     </span>
                   </div>
                 </div>
@@ -76,7 +71,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="text-[#C86D44] hover:underline font-semibold block"
                       >
-                        {propertyData.contact.whatsappFormatted} (Primary WhatsApp &amp; Front Desk)
+                        {propertyData.contact.whatsappFormatted} (Call &amp; Direct WhatsApp)
                       </a>
                     </div>
                   </div>
@@ -100,19 +95,50 @@ export default function ContactPage() {
                   <div>
                     <strong className="text-[#22201E] block font-semibold">Instagram</strong>
                     <a
-                      href="https://instagram.com/lavraluxurycamp"
+                      href="https://instagram.com/magicrumhussain"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#22201E] hover:text-[#C86D44] transition-colors"
                     >
-                      @lavraluxurycamp
+                      @magicrumhussain
                     </a>
                   </div>
                 </div>
               </div>
 
+              {/* Quick Contact Actions: Call Now, WhatsApp, Get Directions */}
+              <div className="pt-4 border-t border-[#E5E0D8] space-y-2.5">
+                <span className="text-[10px] font-semibold tracking-widest uppercase text-[#747878] font-sans-clean block">
+                  DIRECT ACTIONS
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs font-sans-clean">
+                  <a
+                    href="tel:+962776838471"
+                    className="bg-[#22201E] hover:bg-black text-white py-2.5 px-3 uppercase tracking-wider font-medium text-[10px] transition-colors"
+                  >
+                    Call Now
+                  </a>
+                  <a
+                    href="https://wa.me/962776838471"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#C86D44] hover:bg-[#B85D3B] text-white py-2.5 px-3 uppercase tracking-wider font-medium text-[10px] transition-colors"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="https://maps.google.com/?q=Wadi+Rum+Road,+Ad+Disah,+Jordan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-[#22201E] hover:bg-[#22201E] hover:text-white text-[#22201E] py-2.5 px-3 uppercase tracking-wider font-medium text-[10px] transition-colors"
+                  >
+                    Get Directions
+                  </a>
+                </div>
+              </div>
+
               {/* Official Booking Channels */}
-              <div className="pt-6 border-t border-[#E5E0D8] space-y-3">
+              <div className="pt-4 border-t border-[#E5E0D8] space-y-3">
                 <span className="text-[10px] font-semibold tracking-widest uppercase text-[#7B8B76] font-sans-clean block">
                   OFFICIAL ONLINE BOOKING CHANNELS
                 </span>
@@ -139,16 +165,14 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Check-In / Check-Out House Rules */}
+            {/* Helpful Guest Notes */}
             <div className="bg-[#FAF9F6] border border-[#E5E0D8] p-6 text-xs text-[#444748] font-sans-clean space-y-2">
-              <span className="font-semibold uppercase tracking-wider text-[#22201E] block">
-                Stay Details &amp; Policies:
+              <span className="font-semibold uppercase tracking-wider text-[#22201E] block mb-1">
+                Helpful Guest Notes &amp; Policies:
               </span>
-              <p>&bull; <strong>Check-in:</strong> 8:00 AM &ndash; 10:30 PM (24-hour reception desk)</p>
-              <p>&bull; <strong>Check-out:</strong> 7:00 AM &ndash; 11:30 AM (express check-out available)</p>
-              <p>&bull; <strong>Breakfast Buffet:</strong> Complimentary daily (7:30 AM &ndash; 8:30 AM)</p>
-              <p>&bull; <strong>Pet Policy:</strong> Pet-friendly (allowed at no extra charge upon advance request)</p>
-              <p>&bull; <strong>Transport &amp; Parking:</strong> Free private and valet parking on-site; airport shuttles available</p>
+              <p>&bull; <strong>Check-in &amp; Check-out:</strong> 24-hour check-in and check-out available; no age restrictions.</p>
+              <p>&bull; <strong>Pet Policy:</strong> Pets are welcome at no extra charge.</p>
+              <p>&bull; <strong>Protected Area Entry:</strong> Entry to the Wadi Rum Protected Area requires a separate visitor fee or valid Jordan Pass.</p>
             </div>
 
           </div>
@@ -161,41 +185,40 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Interactive Location & Neighbourhood Map Section */}
+      {/* Interactive Location & Landmarks Section */}
       <section className="py-16 bg-[#FAF9F6] border-t border-[#E5E0D8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-
               <h2 className="font-serif-editorial text-3xl sm:text-4xl text-[#22201E] font-light">
                 In the Heart of Wadi Rum
               </h2>
-            </div>
 
+            </div>
           </div>
 
-          {/* Walking Distance Markers Bar */}
+          {/* Landmarks Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-sans-clean">
             <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-4 text-center">
               <Footprints className="w-4 h-4 text-[#C86D44] mx-auto mb-1" />
-              <strong className="block text-[#22201E]">Wadi Rum Visitor Center</strong>
-              <span className="text-[#7B8B76]">Steps away (150 m)</span>
+              <strong className="block text-[#22201E]">Hashim Cafeteria</strong>
+              <span className="text-[#7B8B76]">600 m away</span>
             </div>
             <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-4 text-center">
               <Footprints className="w-4 h-4 text-[#C86D44] mx-auto mb-1" />
-              <strong className="block text-[#22201E]">Sunset Point</strong>
-              <span className="text-[#7B8B76]">10-minute drive</span>
+              <strong className="block text-[#22201E]">Al-Disah Train Station</strong>
+              <span className="text-[#7B8B76]">4.9 km (محطة الديسة)</span>
             </div>
             <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-4 text-center">
               <Footprints className="w-4 h-4 text-[#C86D44] mx-auto mb-1" />
-              <strong className="block text-[#22201E]">Canyon Kakharas</strong>
-              <span className="text-[#7B8B76]">3.2 km (5-min drive)</span>
+              <strong className="block text-[#22201E]">Seven Mountains Rest.</strong>
+              <span className="text-[#7B8B76]">11 km</span>
             </div>
             <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-4 text-center">
               <Footprints className="w-4 h-4 text-[#C86D44] mx-auto mb-1" />
               <strong className="block text-[#22201E]">King Hussein Airport</strong>
-              <span className="text-[#7B8B76]">1h 7m (Shuttle available)</span>
+              <span className="text-[#7B8B76]">69–70 km (Shuttle available)</span>
             </div>
           </div>
 
@@ -209,7 +232,7 @@ export default function ContactPage() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
-              title="LAVRA LUXURY CAMP Google Map Pin"
+              title="Magic Rum Hussain Google Map Location"
               className="w-full h-full"
             />
           </div>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { Heart, Sparkles, BrickWall, ShieldCheck, ArrowRight, UserCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { AboutHeroSection } from "@/components/about/AboutHeroSection";
 import { AboutOriginsSection } from "@/components/about/AboutOriginsSection";
@@ -11,9 +10,9 @@ import { ConsciousLivingSection } from "@/components/about/ConsciousLivingSectio
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "About Lavra Luxury Camp | 5-Star Desert Camp & Aparthotel",
+  title: "About Our Camp & Family Host | Magic Rum Hussain Wadi Rum",
   description:
-    "Discover Lavra Luxury Camp: a 5-star desert camp & aparthotel located in the heart of the Wadi Rum Protected Area in Jordan. 30 luxury suites, central fireplace, international dining, and guided jeep tours.",
+    "Discover Magic Rum Hussain (Magic Rum Luxury Hussen): a peaceful 5-star Bedouin camp and bubble dome glamping near Ad Disah in Wadi Rum, Jordan. Hosted by Hussen Al-Zawaideh and his family.",
 };
 
 export default function AboutPage() {
@@ -23,7 +22,7 @@ export default function AboutPage() {
       {/* 1. Destination Luxury Hero Section */}
       <AboutHeroSection />
 
-      {/* 2. Chapter I: The Soul of Lavra */}
+      {/* 2. Chapter I: Welcome to Magic Rum Hussain */}
       <AboutOriginsSection />
 
       {/* 3. Bedouin Hospitality & Modern Luxury */}
@@ -32,7 +31,7 @@ export default function AboutPage() {
       {/* 4. Desert Sanctuary Quote Banner */}
       <FamilyGatesQuoteSection />
 
-      {/* 5. Conscious Expedition Living */}
+      {/* 5. Camp Amenities & Bedouin Tradition */}
       <ConsciousLivingSection />
 
       {/* Setting & Sanctuary: Desert Rest & Climate Control */}
@@ -44,16 +43,16 @@ export default function AboutPage() {
               <SectionHeading
                 eyebrow="Desert Rest & Tranquility"
                 scriptAccent="peaceful sleep"
-                title="Sound-Insulated Comfort in Wadi Rum"
-                subtitle="How our thoughtful architecture provides restful sleep under clear starry skies."
+                title="50 m² Glamping Comfort in Wadi Rum"
+                subtitle="How our thoughtful Martian bubble domes and rooms provide restful sleep under clear starry skies."
               />
 
               <div className="space-y-4 text-sm text-[#444748] font-sans-clean leading-relaxed">
                 <p>
-                  Positioned directly within the dramatic mountains of the Wadi Rum Protected Area on Ram Street, Lavra Luxury Camp offers serene, restorative rest far from urban clamor.
+                  Positioned in a quiet pocket of the Wadi Rum Protected Area along Wadi Rum Road near Ad Disah, Magic Rum Hussain offers serene, restorative rest far from crowded tourist tracks.
                 </p>
                 <p>
-                  All 30 guestrooms and ground-floor apartments feature sound-insulated walls and whisper-quiet climate-controlled air conditioning and heating. After an exhilarating day traversing red dunes and ancient canyons, retreat into a private sanctuary with deep bathtubs, plush bathrobes, and unobstructed mountain vistas.
+                  All our 50 m² units feature cozy indoor fireplaces, whisper-quiet air conditioning, reliable heating, and soundproofing. After an exhilarating day exploring red sand dunes and ancient rock bridges on a 4x4 Jeep safari, retreat to your private mountain-view terrace, enjoy a hot walk-in shower, and join the family around the evening campfire for Bedouin tea and slow-cooked Zarb.
                 </p>
               </div>
 
@@ -61,7 +60,7 @@ export default function AboutPage() {
                 <strong className="text-[#22201E] uppercase tracking-wider block mb-1">
                   Commitment to 5-Star Cleanliness &amp; Comfort:
                 </strong>
-                Rooms feature climate-controlled AC and heating, sound-insulated walls, premium bedding with nightly turndown service, in-room safes, and ensuite bathrooms with walk-in showers or deep bathtubs.
+                Every unit includes a wood-burning fireplace, climate AC and heating, soundproofing, private en-suite bathroom with walk-in shower and hot water, coffee machine, electric kettle, and free high-speed Wi-Fi (rated 8.8/10).
               </div>
             </div>
 
@@ -69,12 +68,11 @@ export default function AboutPage() {
               <div className="relative h-[380px] sm:h-[460px] border border-[#E5E0D8] shadow-xl image-zoom-container">
                 <Image
                   src="/images/about/peaceful-sanctuary.jpg"
-                  alt="Tranquil mountain views and peaceful desert atmosphere at Lavra Luxury Camp"
+                  alt="Tranquil mountain views and peaceful desert atmosphere at Magic Rum Hussain in Wadi Rum Jordan"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
-
               </div>
             </div>
 
@@ -86,10 +84,10 @@ export default function AboutPage() {
       <section className="py-20 bg-[#F7F5F0] text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="font-serif-editorial text-3xl sm:text-5xl text-[#22201E] font-light">
-            Experience Lavra Luxury Camp
+            Experience Magic Rum Hussain
           </h2>
           <p className="text-sm text-[#444748] font-sans-clean">
-            Reserve your dates directly on WhatsApp or online for immediate confirmation and excursion planning.
+            Connect directly with Hussen on WhatsApp to confirm bubble dome availability, village pickup timing, and custom tour packages.
           </p>
           <div className="pt-2">
             <a
@@ -98,7 +96,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#C86D44] hover:bg-[#B85D3B] text-white px-8 py-4 text-xs font-semibold tracking-widest uppercase transition-colors shadow-md"
             >
-              <span>Connect with Host on WhatsApp</span>
+              <span>Connect with Hussen on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -108,4 +106,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

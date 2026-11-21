@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowUpRight, ShieldCheck, Heart } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { propertyData } from "@/data/property";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
@@ -16,7 +16,7 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-4">
             <div className="flex flex-col">
               <span className="font-serif-editorial text-3xl sm:text-4xl font-light tracking-[0.24em] uppercase text-white">
-                LAVRA LUXURY CAMP
+                MAGIC RUM HUSSAIN
               </span>
               <span className="text-[10px] tracking-[0.3em] font-semibold text-[#FFDBCF] uppercase font-sans-clean">
                 WADI RUM • JORDAN
@@ -24,7 +24,8 @@ export function Footer() {
             </div>
 
             <p className="text-sm text-[#E5E0D8]/80 leading-relaxed max-w-md pt-2 font-sans-clean">
-              A 5-star desert aparthotel balancing rugged wilderness exploration with contemporary city luxury. Situated steps from the Wadi Rum Visitor Center, offering 30 distinct climate-controlled suites with direct sandstone mountain views.
+              Family-run 5-star Bedouin desert camp and bubble dome glamping in the heart of Wadi Rum, Jordan.
+              Spacious 50 m² air-conditioned rooms, panoramic Martian bubble domes, and slow-cooked Zarb dinners with Hussen and his family.
             </p>
           </div>
 
@@ -41,7 +42,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/accommodation" className="hover:text-white transition-colors">
-                  Suites &amp; Apartments
+                  Rooms &amp; Bubble Domes
                 </Link>
               </li>
               <li>
@@ -51,7 +52,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/about" className="hover:text-white transition-colors">
-                  Our Camp &amp; Story
+                  About Our Camp
                 </Link>
               </li>
               <li>
@@ -71,7 +72,7 @@ export function Footer() {
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C86D44] shrink-0 mt-0.5" />
                 <span>
-                  Ram Street, Wadi Rum Protected Area, Jordan
+                  Wadi Rum Road (طريق وادي رم), Ad Disah, Wadi Rum, Jordan
                 </span>
               </p>
               <p className="flex items-center gap-2">
@@ -95,12 +96,12 @@ export function Footer() {
               <p className="flex items-center gap-2">
                 <InstagramIcon className="w-4 h-4 text-[#C86D44] shrink-0" />
                 <a
-                  href="https://instagram.com/lavraluxurycamp"
+                  href="https://instagram.com/magicrumhussain"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  @lavraluxurycamp
+                  @magicrumhussain
                 </a>
               </p>
             </div>
@@ -143,7 +144,7 @@ export function Footer() {
 
             <div className="pt-2 text-[11px] text-[#7B8B76] flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-[#C86D44]" />
-              <span>4.0 / 5.0 Very Good Rating</span>
+              <span>9.3 / 10 Superb Rating (71 Reviews)</span>
             </div>
           </div>
 
@@ -151,13 +152,13 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Note */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60 font-sans-clean">
-          <p>© 2026 Lavra Luxury Camp. All rights reserved.</p>
+          <p>© 2026 Magic Rum Hussain. All rights reserved.</p>
           <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.2em]">
-            <span>5-Star Desert Aparthotel</span>
+            <span>5-Star Bedouin Camp &amp; Glamping</span>
             <span>•</span>
             <span>Wadi Rum Protected Area</span>
             <span>•</span>
-            <span>Martian Mountain Views</span>
+            <span>Panoramic Bubble Domes</span>
           </div>
         </div>
 

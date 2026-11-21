@@ -10,8 +10,8 @@ export function AboutOriginsSection() {
           <div className="lg:col-span-6 space-y-4">
             <div className="relative aspect-[4/3] w-full overflow-hidden shadow-sm bg-[#EFECE6]">
               <Image
-                src="/images/architecture/brick-facade.jpg"
-                alt="Lavra Luxury Camp 5-star desert aparthotel suites nestled against the Wadi Rum mountains"
+                src="/images/architecture/discover-batu-bata-ai.jpg"
+                alt="Magic Rum Hussain desert camp and Martian bubble domes nestled against the Wadi Rum mountains"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -21,9 +21,8 @@ export function AboutOriginsSection() {
             {/* Image Caption Footer */}
             <div className="flex items-center justify-between text-[#747878] pt-1">
               <span className="text-[10px] sm:text-[11px] font-sans-clean font-medium tracking-[0.2em] uppercase">
-                FIGURE 01 · DESERT MOUNTAIN SANCTUARY
+                FIGURE 01 · QUIET DESERT SANCTUARY
               </span>
-
             </div>
           </div>
 
@@ -38,17 +37,17 @@ export function AboutOriginsSection() {
             <h2 className="font-serif-editorial text-3xl sm:text-4xl lg:text-[46px] text-[#22201E] font-normal leading-[1.12] tracking-tight">
               Welcome to
               <br />
-              Lavra Luxury Camp
+              Magic Rum Hussain
             </h2>
 
             {/* Paragraphs */}
             <div className="space-y-4 text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.85] font-normal">
               <p>
-                Positioned directly within the spectacular mountains of the <strong className="font-medium text-[#22201E]">Wadi Rum Protected Area</strong>, Lavra Luxury Camp is a 5-star aparthotel that balances rugged desert exploration with modern, upscale comfort. Located just a 5-minute walk from the heart of Wadi Rum and steps from the Visitor Center, our 30 distinct guestrooms and ground-floor apartments offer direct, unobstructed views of the Martian landscape.
+                Managed by local host Hussen Al-Zawaideh and his family, Magic Rum Hussain (Magic Rum Luxury Hussen) is a peaceful, mid-sized desert camp nestled a few kilometres inside the Wadi Rum desert near Ad Disah. Designed for solo travelers, couples, and families alike, our camp blends authentic Bedouin warmth with modern comforts—offering spacious 50 m² air-conditioned rooms and panoramic Martian bubble domes with reliable heating, hot water, and private mountain-view terraces.
               </p>
 
               <p className="hidden md:block">
-                Whether you are relaxing by our central outdoor fireplace under the stars, enjoying our multi-cuisine restaurant, or embarking on a guided jeep tour, our multilingual staff is dedicated to providing an unforgettable Jordanian adventure.
+                From punctual 4x4 pickups in Wadi Rum Village to slow-cooked traditional Zarb dinners around the campfire, our team ensures every detail of your desert stay feels like home.
               </p>
             </div>
           </div>
@@ -58,4 +57,3 @@ export function AboutOriginsSection() {
     </section>
   );
 }
-

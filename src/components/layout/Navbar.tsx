@@ -77,19 +77,19 @@ export function Navbar() {
       >
         <div className="w-full flex items-center justify-between">
 
-          {/* Brand Logo (Left): Lowercase serif "lavra" + " · wadi rum" */}
+          {/* Brand Logo (Left): Lowercase serif "magic rum" + " · hussain" */}
           <Link href="/" className="inline-flex items-baseline md:items-baseline gap-1.5 sm:gap-2 group">
             <span
               className={`font-serif-editorial text-[26px] sm:text-[32px] font-normal lowercase tracking-normal leading-none whitespace-nowrap transition-colors ${isTransparent ? "text-white" : "text-[#22201E] group-hover:text-[#C86D44]"
                 }`}
             >
-              lavra
+              magic rum
             </span>
             <span
               className={`font-sans-clean text-[13px] sm:text-[15px] tracking-[0.16em] sm:tracking-[0.2em] font-light whitespace-nowrap transition-colors ${isTransparent ? "text-white/80" : "text-[#7B8B76]"
                 }`}
             >
-              · wadi rum
+              · hussain
             </span>
           </Link>
 
@@ -122,7 +122,7 @@ export function Navbar() {
               className={`text-[11px] font-medium tracking-[0.18em] uppercase ${isTransparent ? "text-white" : "text-[#7B8B76]"
                 }`}
             >
-              EN <span className="opacity-40">/</span> ID
+              EN <span className="opacity-40">/</span> AR
             </span>
 
             <button

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { format } from "date-fns";
 import { Calendar as CalendarIcon, Users, MessageSquare, ArrowRight, ShieldCheck } from "lucide-react";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 import { propertyData } from "@/data/property";
@@ -14,7 +13,7 @@ export function BookingBar({ variant = "floating" }: BookingBarProps) {
   const [checkIn, setCheckIn] = useState<string>("");
   const [checkOut, setCheckOut] = useState<string>("");
   const [guests, setGuests] = useState<string>("2 Guests");
-  const [roomType, setRoomType] = useState<string>("Superior Deluxe Double or Twin Room");
+  const [roomType, setRoomType] = useState<string>("Superior King Room");
 
   function handleDirectBooking() {
     const url = generateWhatsAppUrl({
@@ -23,7 +22,7 @@ export function BookingBar({ variant = "floating" }: BookingBarProps) {
       checkOut: checkOut || "Flexible",
       guests,
       roomType,
-      message: "Inquiring about best available direct booking rates.",
+      message: "Inquiring about best available direct booking rates and desert excursion options.",
     });
     window.open(url, "_blank", "noopener,noreferrer");
   }
@@ -89,6 +88,9 @@ export function BookingBar({ variant = "floating" }: BookingBarProps) {
               >
                 <option value="1 Adult">1 Adult (Solo Traveler)</option>
                 <option value="2 Adults">2 Adults (Couple / Friends)</option>
+                <option value="3 Adults">3 Guests (Triple Suite)</option>
+                <option value="4 Adults">4 Guests (Quadruple Suite)</option>
+                <option value="5 Guests">5 Guests (Family Suite)</option>
               </select>
             </div>
           </div>
@@ -103,12 +105,11 @@ export function BookingBar({ variant = "floating" }: BookingBarProps) {
               onChange={(e) => setRoomType(e.target.value)}
               className="w-full text-xs sm:text-sm font-sans-clean text-[#22201E] bg-transparent border-none p-0 focus:ring-0 outline-none cursor-pointer"
             >
-              <option value="Superior Deluxe Double or Twin Room">Superior Deluxe Double or Twin Room (40 m²)</option>
-              <option value="Superior Double or Twin Room, Balcony">Superior Double or Twin Room (Mountain View)</option>
-              <option value="Triple Room, Balcony, Mountain View">Triple Room, Balcony, Mountain View</option>
-              <option value="Luxury Triple Room, Balcony">Luxury Triple Room, Balcony, Mountain View</option>
-              <option value="Comfort Quadruple Room, Balcony">Comfort Quadruple Room, Balcony</option>
-              <option value="Quadruple Room Mountain View">Quadruple Room Mountain View (40 m²)</option>
+              <option value="Superior King Room">Superior King Room (50 m²)</option>
+              <option value="Superior Single Room">Superior Single Room (50 m²)</option>
+              <option value="Superior Triple Room">Superior Triple Room (50 m²)</option>
+              <option value="Superior Quadruple Room">Superior Quadruple Room (50 m²)</option>
+              <option value="Superior Family Room">Superior Family Room (50 m²)</option>
             </select>
           </div>
 
@@ -138,16 +139,15 @@ export function BookingBar({ variant = "floating" }: BookingBarProps) {
         <div className="mt-4 pt-3 border-t border-[#E5E0D8]/60 flex flex-wrap items-center justify-between gap-3 text-[11px] text-[#444748] font-sans-clean">
           <div className="flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5 text-[#2A4B3C]" />
-            <span>Guaranteed Direct Rates: <strong>JOD 75 – JOD 180</strong> / night (Best Rate Guarantee)</span>
+            <span>Guaranteed Direct Rates: <strong>JOD 65 – JOD 160</strong> / night (Rated 9.3/10 Superb)</span>
           </div>
           <div className="flex items-center gap-4 text-[#7B8B76]">
             <span>• No Booking Fees</span>
-            <span>• Free Valet &amp; Private Parking</span>
-            <span>• Steps from Visitor Center</span>
+            <span>• Free Private Parking &amp; EV Charger</span>
+            <span>• Punctual Village 4x4 Pickup</span>
           </div>
         </div>
       </div>
     </div>
   );
 }
-

@@ -11,9 +11,13 @@ export function GuestbookQuoteSection() {
 
         {/* Italic Quote */}
         <blockquote className="font-serif-editorial italic text-2xl sm:text-3xl lg:text-[34px] text-[#22201E] font-normal leading-[1.38] tracking-tight">
-          &ldquo;Wadi Rum feels like another planet, yet here every 5-star comfort awaits.
-          Wake to copper peaks, explore ancient canyons by jeep, and return to fireside starlight.&rdquo;
+          &ldquo;An unforgettable experience in every sense! Staying at Majak Rum Hussein Camp was beyond amazing—from
+          the moment we arrived until we left, everything exceeded our expectations. Dinner was a highlight: the traditional Zarb cooked under the sand...&rdquo;
         </blockquote>
+
+        <p className="text-xs font-sans-clean uppercase tracking-[0.2em] text-[#747878]">
+          — Hreera, Jordan (Verified Guest on Booking.com)
+        </p>
 
         {/* Small subtle divider */}
         <div className="pt-2 flex justify-center">
@@ -23,4 +27,3 @@ export function GuestbookQuoteSection() {
     </section>
   );
 }
-

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 interface RoomTwinSectionProps {
@@ -14,14 +13,13 @@ interface RoomTwinSectionProps {
 }
 
 export function RoomTwinSection({
-  eyebrow = "PANORAMIC BALCONY RESIDENCE · MOUNTAIN VIEW",
-  title = "Superior Double or Twin Room, Balcony, Mountain View",
-  sizeViewText = "32 m² · Direct Mountain Balcony · Sound-Insulated AC Comfort",
-  priceText = "JOD 80",
+  eyebrow = "50 M² FAMILY RESIDENCE · SLEEPS UP TO 5",
+  title = "Superior Family Room",
+  priceText = "JOD 150",
   priceNote = "/ night net",
-  imageSrc = "/images/rooms/twin-canopy-bed.jpg",
-  imageAlt = "Superior Double or Twin Room with private mountain balcony at Lavra Luxury Camp Wadi Rum",
-  imageBadgeText = "PANORAMIC MOUNTAIN BALCONY",
+  imageSrc = "/images/rooms/room-deluxe-angle.jpg",
+  imageAlt = "Superior Family Room 50 m² with private mountain terrace at Magic Rum Hussain Wadi Rum",
+  imageBadgeText = "50 M² FAMILY GLAMPING SUITE",
 }: RoomTwinSectionProps) {
   return (
     <section className="py-16 sm:py-20 border-t border-[#E5E0D8]/80">
@@ -39,6 +37,12 @@ export function RoomTwinSection({
           </div>
 
           <div className="text-left md:text-right space-y-0.5">
+            <span className="font-serif-editorial text-2xl sm:text-3xl text-[#22201E]">
+              {priceText}
+            </span>
+            <span className="text-xs text-[#747878] font-sans-clean ml-1">
+              {priceNote}
+            </span>
           </div>
         </div>
 
@@ -49,10 +53,10 @@ export function RoomTwinSection({
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-4 text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.8] font-normal">
               <p>
-                Positioned with panoramic orientation toward the sandstone cliffs of Wadi Rum, this suite features two large twin beds dressed in luxury linens, climate-controlled heating/cooling, sound-insulated walls, and a nightly turndown service.
+                Our 50 m² Superior Family Room provides ample space for up to 5 guests with a choice of 5 single beds or 3 singles and 1 large double bed. Completely detached and ground-floor accessible, it includes an indoor wood-burning fireplace, whisper AC, reliable winter heating, and soundproofing.
               </p>
               <p className="hidden md:block">
-                Step out onto your private balcony to take in unobstructed Martian vistas, sip hot mint tea as the sun dips below the peaks, or relax after an exhilarating 4x4 desert jeep tour.
+                Step out onto your private mountain-view terrace to contemplate the peaceful desert amphitheater, sip hot sage tea as the evening stars emerge, or recharge after an exciting 4x4 Jeep tour across Wadi Rum.
               </p>
             </div>
 
@@ -62,25 +66,25 @@ export function RoomTwinSection({
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#747878] font-medium">
                   CONFIGURATION
                 </span>
-                <span className="text-[#22201E] font-normal">2 Large Twin Beds</span>
+                <span className="text-[#22201E] font-normal">Up to 5 Guests (Flexible Bedding)</span>
               </div>
               <div className="flex items-baseline justify-between border-b border-[#E5E0D8]/40 pb-2">
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#747878] font-medium">
                   SURFACE AREA
                 </span>
-                <span className="text-[#22201E] font-normal">32 m² + Furnished Balcony</span>
+                <span className="text-[#22201E] font-normal">50 m² + Mountain Terrace</span>
               </div>
               <div className="flex items-baseline justify-between border-b border-[#E5E0D8]/40 pb-2">
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#747878] font-medium">
-                  ACOUSTICS
+                  FIREPLACE &amp; CLIMATE
                 </span>
-                <span className="text-[#22201E] font-normal">Sound-insulated walls</span>
+                <span className="text-[#22201E] font-normal">Indoor Fireplace, AC &amp; Heating</span>
               </div>
               <div className="flex items-baseline justify-between pt-0.5">
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#747878] font-medium">
-                  CLIMATE
+                  ACCESSIBILITY
                 </span>
-                <span className="text-[#22201E] font-normal">Whisper A/C &amp; Heating</span>
+                <span className="text-[#22201E] font-normal">Ground-Floor &amp; Wheelchair Accessible</span>
               </div>
             </div>
 
@@ -100,7 +104,7 @@ export function RoomTwinSection({
             </div>
           </div>
 
-          {/* Right Column: Wide Landscape Four-Poster Canopy Room Photo */}
+          {/* Right Column: Wide Photo */}
           <div className="lg:col-span-7 relative">
             <div className="relative aspect-[16/11] w-full shadow-sm image-zoom-container group">
               <Image
@@ -125,4 +129,3 @@ export function RoomTwinSection({
     </section>
   );
 }
-

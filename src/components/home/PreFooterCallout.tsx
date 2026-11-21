@@ -11,7 +11,7 @@ export function PreFooterCallout() {
       <div className="absolute inset-0 opacity-30">
         <Image
           src="/images/courtyard/courtyard-evening.jpg"
-          alt="Warm evening ambiance and starry night sky at Lavra Luxury Camp Wadi Rum"
+          alt="Warm evening ambiance and starry night sky at Magic Rum Hussain Wadi Rum"
           fill
           className="object-cover"
         />
@@ -21,11 +21,11 @@ export function PreFooterCallout() {
       <div className="relative max-w-4xl mx-auto px-6 text-center space-y-6">
 
         <h2 className="font-serif-editorial text-4xl sm:text-6xl lg:text-7xl font-light text-[#F7F5F0] leading-tight">
-          A 5-Star Oasis in <span className="italic">Wadi Rum</span>
+          An Unforgettable Experience in <span className="italic">Wadi Rum</span>
         </h2>
 
         <p className="text-sm sm:text-base text-[#E5E0D8]/90 font-sans-clean max-w-2xl mx-auto leading-relaxed font-light">
-          Experience the ultimate fusion of remote wilderness exploration and contemporary 5-star city luxury at Lavra Luxury Camp.
+          Sleep beneath the stars in panoramic Martian bubble domes, savor slow-cooked traditional Zarb dinners, and explore red sand dunes on private 4x4 safaris with Hussen Al-Zawaideh and his family.
         </p>
 
         {/* Dual CTA */}
@@ -52,11 +52,10 @@ export function PreFooterCallout() {
 
         <div className="pt-4 text-xs text-[#EBDDD8]/70 flex items-center justify-center gap-2 font-sans-clean">
           <ShieldCheck className="w-4 h-4 text-[#FFDBCF]" />
-          <span>Direct reservation assistance &amp; tour coordination (+962 7 7239 0552)</span>
+          <span>Direct reservation assistance &amp; tour coordination (+962 7 7683 8471)</span>
         </div>
 
       </div>
     </section>
   );
 }
-

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { MessageSquare, Mail, Calendar, Users, Send, CheckCircle2, ShieldCheck } from "lucide-react";
+import { MessageSquare, Mail, CheckCircle2 } from "lucide-react";
 import { generateWhatsAppUrl, generateMailtoUrl } from "@/lib/whatsapp";
 
 const enquirySchema = z
@@ -20,15 +20,15 @@ const enquirySchema = z
       "2 Adults (Twin Bed)",
       "3 Adults / Family",
       "4 Adults / Family",
+      "5 Guests (Family Suite)",
     ]),
     roomPreference: z.enum([
-      "Superior Deluxe Double or Twin Room",
-      "Superior Double or Twin Room, Balcony, Mountain View",
-      "Triple Room, Balcony, Mountain View",
-      "Luxury Triple Room, Balcony, Mountain View",
-      "Comfort Quadruple Room, Balcony, Mountain View",
-      "Quadruple Room Mountain View",
-      "Any Available Suite",
+      "Superior King Room (50 m²)",
+      "Superior Single Room (50 m²)",
+      "Superior Triple Room (50 m²)",
+      "Superior Quadruple Room (50 m²)",
+      "Superior Family Room (50 m²)",
+      "Any Available Martian Bubble Dome / Room",
     ]),
     message: z.string().optional(),
   })
@@ -57,7 +57,7 @@ export function ContactEnquiryForm() {
     resolver: zodResolver(enquirySchema),
     defaultValues: {
       guests: "2 Adults (Couple)",
-      roomPreference: "Superior Deluxe Double or Twin Room",
+      roomPreference: "Superior King Room (50 m²)",
     },
   });
 
@@ -107,7 +107,6 @@ export function ContactEnquiryForm() {
         <h3 className="font-serif-editorial text-3xl sm:text-4xl text-[#22201E] font-light">
           Send a Direct Reservation Request
         </h3>
-
       </div>
 
       <form onSubmit={handleSubmit(onSubmitWhatsApp)} className="space-y-6">
@@ -175,6 +174,7 @@ export function ContactEnquiryForm() {
               <option value="2 Adults (Twin Bed)">2 Adults (Twin Beds)</option>
               <option value="3 Adults / Family">3 Guests (Triple Suite)</option>
               <option value="4 Adults / Family">4 Guests (Quadruple Suite)</option>
+              <option value="5 Guests (Family Suite)">5 Guests (Family Suite)</option>
             </select>
           </div>
         </div>
@@ -219,24 +219,23 @@ export function ContactEnquiryForm() {
             {...register("roomPreference")}
             className="w-full bg-[#FAF9F6] border border-[#E5E0D8] px-4 py-3 text-sm text-[#22201E] focus:outline-none focus:border-[#C86D44] font-sans-clean cursor-pointer"
           >
-            <option value="Superior Deluxe Double or Twin Room">Superior Deluxe Double or Twin Room (40 m²)</option>
-            <option value="Superior Double or Twin Room, Balcony, Mountain View">Superior Double or Twin Room, Balcony, Mountain View</option>
-            <option value="Triple Room, Balcony, Mountain View">Triple Room, Balcony, Mountain View</option>
-            <option value="Luxury Triple Room, Balcony, Mountain View">Luxury Triple Room, Balcony, Mountain View</option>
-            <option value="Comfort Quadruple Room, Balcony, Mountain View">Comfort Quadruple Room, Balcony, Mountain View</option>
-            <option value="Quadruple Room Mountain View">Quadruple Room Mountain View (40 m²)</option>
-            <option value="Any Available Suite">Any Available Suite</option>
+            <option value="Superior King Room (50 m²)">Superior King Room (50 m²)</option>
+            <option value="Superior Single Room (50 m²)">Superior Single Room (50 m²)</option>
+            <option value="Superior Triple Room (50 m²)">Superior Triple Room (50 m²)</option>
+            <option value="Superior Quadruple Room (50 m²)">Superior Quadruple Room (50 m²)</option>
+            <option value="Superior Family Room (50 m²)">Superior Family Room (50 m²)</option>
+            <option value="Any Available Martian Bubble Dome / Room">Any Available Martian Bubble Dome / Room</option>
           </select>
         </div>
 
         {/* Message / Special Requests */}
         <div className="space-y-1.5">
           <label className="block text-xs font-semibold uppercase tracking-wider text-[#22201E] font-sans-clean">
-            Special Requests / Arrival Time (Optional)
+            Special Requests / Wadi Rum Village Pickup / Tour Packages (Optional)
           </label>
           <textarea
             rows={3}
-            placeholder="e.g. Arriving from King Hussein Airport; requesting airport shuttle, guided 4x4 jeep safari, or dietary needs."
+            placeholder="e.g. Village parking arrival time for 4x4 transfer; requesting sunset camel trek, 4x4 Jeep tour, Zarb dinner bundles, or dietary requirements."
             {...register("message")}
             className="w-full bg-[#FAF9F6] border border-[#E5E0D8] px-4 py-3 text-sm text-[#22201E] focus:outline-none focus:border-[#C86D44] font-sans-clean"
           />
@@ -263,12 +262,10 @@ export function ContactEnquiryForm() {
           </button>
         </div>
 
-
-
         {submittedSuccess && (
           <div className="p-4 bg-[#EBDDD8] text-[#22201E] text-xs font-sans-clean flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-[#C86D44]" />
-            <span>Thank you! WhatsApp has opened in a new tab. Our Lavra Luxury Camp concierge will reply shortly.</span>
+            <span>Thank you! WhatsApp has opened in a new tab. Hussen and the Magic Rum Hussain team will reply shortly.</span>
           </div>
         )}
 
@@ -276,4 +273,3 @@ export function ContactEnquiryForm() {
     </div>
   );
 }
-

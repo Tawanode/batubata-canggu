@@ -7,71 +7,70 @@ interface DirectoryItem {
 interface DirectoryCategory {
   categoryNumber: string;
   title: string;
-
   items: DirectoryItem[];
 }
 
 const directoryData: DirectoryCategory[] = [
   {
     categoryNumber: "CATEGORY 01",
-    title: "Immediate Camp Vicinity",
+    title: "Immediate Vicinity & Camp Comforts",
     items: [
       {
-        name: "Wadi Rum Visitor Center",
-        distance: "150 M",
-        description: "Official park headquarters with entry permits, protected area maps, and desert heritage exhibits.",
+        name: "Hashim Cafeteria",
+        distance: "600 M",
+        description: "Nearby local cafeteria serving traditional mint tea, cardamom coffee, and quick authentic refreshments along Wadi Rum Road.",
       },
       {
-        name: "Central Outdoor Fireplace",
+        name: "Central Outdoor Campfire & Fireplace",
         distance: "ON-SITE",
-        description: "Traditional Bedouin gathering hearth for evening storytelling, live lute music, and celestial stargazing.",
+        description: "Nightly campfire gatherings with Hussen and family for Bedouin music, herbal tea, and celestial stargazing.",
       },
       {
-        name: "Multi-Cuisine Restaurant & Cafe",
+        name: "Underground Zarb Restaurant",
         distance: "ON-SITE",
-        description: "International gastronomy (African, Catalan, Dutch, Greek, Indian) & daily breakfast buffet with mountain views.",
+        description: "Traditional slow-cooked underground Zarb dinners and exceptional daily breakfast buffet featuring local specialties.",
       },
     ],
   },
   {
     categoryNumber: "CATEGORY 02",
-    title: "Desert Landmarks & Geology",
+    title: "Desert Landmarks & Transit Hubs",
     items: [
       {
-        name: "Canyon Kakharas",
-        distance: "3.2 KM",
-        description: "Dramatic natural sandstone canyon with towering red cliffs and sheltered expedition walking trails.",
+        name: "Al-Disah Train Station (محطة الديسة)",
+        distance: "4.9 KM",
+        description: "Historic Hejaz Railway station in Ad Disah, framed by striking sandstone massifs and desert date palms.",
       },
       {
-        name: "Wadi Rum Sunset Point",
-        distance: "10 MIN",
-        description: "Celebrated vantage point to watch the evening sun illuminate the Martian desert in copper and violet.",
+        name: "Seven Mountains Restaurant",
+        distance: "11 KM",
+        description: "Renowned regional dining destination serving traditional Jordanian cuisine and grilled specialties.",
       },
       {
-        name: "Nabataean Temple & Inscriptions",
-        distance: "8.2 KM",
-        description: "Ancient 1st-century BC ruins and petroglyphs carved into the sandstone mountains by Petra's builders.",
+        name: "Wadi Rum Station",
+        distance: "13 KM",
+        description: "Historic railway outpost with evocative desert mountain views and early 20th-century cultural heritage.",
       },
     ],
   },
   {
     categoryNumber: "CATEGORY 03",
-    title: "Excursions & Regional Hubs",
+    title: "Excursions & Regional Connectivity",
     items: [
       {
-        name: "Guided 4x4 Desert Jeep Safaris",
+        name: "4x4 Jeep Safaris & Sandboarding",
         distance: "ON-SITE DESK",
-        description: "Expert Bedouin-guided expeditions across towering dunes, natural rock arches, and historic desert trails.",
+        description: "Half-day, full-day, and sunset Jeep tours to sand dunes, canyons, and rock bridges arranged directly by Hussen.",
       },
       {
-        name: "Deeseh Knowledge Station",
-        distance: "14.7 KM",
-        description: "Regional cultural center showcasing desert agricultural history, Bedouin lifestyle, and conservation.",
+        name: "King Hussein Int'l Airport (Aqaba)",
+        distance: "69–70 KM",
+        description: "Primary international gateway to southern Jordan with private airport shuttle transfers available.",
       },
       {
-        name: "King Hussein Int'l Airport (AQJ)",
-        distance: "1H 7MIN",
-        description: "Convenient international gateway with private airport shuttles and complimentary valet parking.",
+        name: "Eilat-Ramon Airport",
+        distance: "92 KM",
+        description: "Regional international gateway accessible via the Aqaba/Eilat southern border crossing.",
       },
     ],
   },
@@ -89,7 +88,7 @@ export function WalkabilityDirectorySection() {
               CURATED EXPEDITION GUIDE
             </span>
             <h2 className="font-serif-editorial text-3xl sm:text-4xl lg:text-[44px] text-[#22201E] font-normal leading-tight">
-              The Excursions &amp; Vicinity Directory
+              The Excursions &amp; Landmarks Directory
             </h2>
           </div>
         </div>
@@ -106,7 +105,6 @@ export function WalkabilityDirectorySection() {
                 <h3 className="font-serif-editorial text-2xl sm:text-[26px] text-[#22201E] font-normal leading-snug">
                   {cat.title}
                 </h3>
-
               </div>
 
               {/* Items List */}
@@ -135,4 +133,3 @@ export function WalkabilityDirectorySection() {
     </section>
   );
 }
-

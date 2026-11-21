@@ -22,7 +22,7 @@ export function NeighbourhoodGuideSection() {
             </div>
 
             <p className="text-xs sm:text-[13px] text-[#444748] font-sans-clean leading-[1.8] font-normal max-w-sm">
-              Our 5-star camp is perfectly positioned for exploration, located just a 5-minute walk from the heart of Wadi Rum and steps from the main Visitor Center.
+              Set in a quiet stretch of the Wadi Rum desert near Ad Disah, our camp is rated 9.4/10 for location (and 9.9/10 by couples). Guests meet Hussen at the Wadi Rum Village parking area for a seamless 4x4 transfer directly to camp.
             </p>
 
             <div className="pt-4">
@@ -39,12 +39,12 @@ export function NeighbourhoodGuideSection() {
           {/* Right Area: Dual Curated Image Cards (8 cols: 4 + 4) */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
 
-            {/* Card 1: Multi-Cuisine Dining & Coffee Shop */}
+            {/* Card 1: Traditional Zarb Dining & Bedouin Tea */}
             <div className="space-y-4 group">
               <div className="relative aspect-[4/5] w-full shadow-md image-zoom-container">
                 <Image
                   src="/images/neighbourhood/camp-dining-coffee.jpg"
-                  alt="Lavra Luxury Camp multi-cuisine dining restaurant and coffee shop with mountain views"
+                  alt="Traditional Bedouin Zarb dinner spread cooked under the sand at Magic Rum Hussain"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
                   className="object-cover"
@@ -53,25 +53,25 @@ export function NeighbourhoodGuideSection() {
 
               <div className="space-y-1.5 pt-1">
                 <h3 className="font-serif-editorial text-2xl text-[#22201E] font-normal">
-                  Dining &amp; Coffee Shop
+                  Traditional Zarb Dining
                 </h3>
                 <p className="text-xs text-[#444748] font-sans-clean leading-relaxed font-light">
-                  Diverse international menu (African, Catalan, Dutch, Greek, Indian) with daily breakfast buffet and vegan options.
+                  Authentic underground-cooked Zarb dinners slow-roasted beneath the sand, followed by campfire Bedouin tea and stargazing.
                 </p>
               </div>
             </div>
 
-            {/* Card 2: Guided Jeep Safaris & Excursions */}
+            {/* Card 2: Guided 4x4 Jeep Tours & Camel Treks */}
             <div className="space-y-4 group">
               <div className="relative aspect-[4/5] w-full shadow-md image-zoom-container">
                 <Image
                   src="/images/neighbourhood/guided-desert-jeep.jpg"
-                  alt="Guided 4x4 desert jeep tour traversing the red sand dunes of Wadi Rum Protected Area"
+                  alt="4x4 desert Jeep safari traversing the red sand dunes of Wadi Rum Protected Area with Magic Rum Hussain"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
                   className="object-cover"
                 />
-                {/* Subtle top white badge over image matching design */}
+                {/* Subtle top white badge over image */}
                 <div className="absolute top-0 inset-x-0 bg-white/95 py-1.5 text-center">
                   <span className="text-[10px] font-sans-clean tracking-wider text-[#444748]">
                     Wadi Rum Protected Area
@@ -81,10 +81,10 @@ export function NeighbourhoodGuideSection() {
 
               <div className="space-y-1.5 pt-1">
                 <h3 className="font-serif-editorial text-2xl text-[#22201E] font-normal">
-                  Guided Desert Jeep Tours
+                  4x4 Jeep Safaris &amp; Camels
                 </h3>
                 <p className="text-xs text-[#444748] font-sans-clean leading-relaxed font-light">
-                  Expert Bedouin guides, camel treks, trail bicycle hires, and stargazing excursions coordinated directly at our tour desk.
+                  Half-day, full-day, and sunset safaris exploring sand dunes, canyons, rock bridges, and sunrise camel treks arranged directly by Hussen.
                 </p>
               </div>
             </div>

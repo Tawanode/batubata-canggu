@@ -49,7 +49,7 @@ export function MobileFloatingBookingBar() {
           onClick={() => openBookingModal()}
           className="w-full rounded-full bg-[#1A1A1A]/85 backdrop-blur-xl border border-white/10 text-white py-3 px-5 sm:px-6 shadow-[0_16px_32px_rgba(0,0,0,0.25),0_4px_8px_rgba(0,0,0,0.1)] flex items-center justify-between transition-all duration-200 active:scale-[0.98] cursor-pointer"
           style={{ WebkitBackdropFilter: "blur(16px)" }}
-          aria-label="Book your stay at Lavra Luxury Camp"
+          aria-label="Book your stay at Magic Rum Hussain"
         >
           {/* Left: Icon & Non-wrapping Title */}
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
@@ -71,4 +71,3 @@ export function MobileFloatingBookingBar() {
     </div>
   );
 }
-
